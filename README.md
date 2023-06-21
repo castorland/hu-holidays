@@ -18,48 +18,61 @@ This extends [Carbon](http://carbon.nesbot.com/) and adds support for Hungarian 
 
 ### Supported Holidays
 
-* April Fool's Day
-* Armed Forces Day
-* Ash Wednesday
+* Újév
+* Vízkereszt, a farsang kezdete
+* A világirodalom napja
+* A vallások világnapja
+* A magyar kultúra napja
+* A holokauszt nemzetközi emléknapja
+* A civilek napja
+* Rejtvényfejtők világnapja
+* Rákellenes világnap
+* Valentin-nap
+* A kínai újév kezdete
+* Hamvazószerda
+* A meteorológiai tavasz kezdete
+* Energiatakarékossági világnap
+* Nőnap
+* Nemzetközi pi nap
+* Az 1848-as forradalom ünnepe
+* A víz világnapja
+* Bolondok napja
+* Nagypéntek
+* Húsvét hétfő
+* Az egészség világnapja
+* A magyar költészet napja
+* A Föld napja
+* A méhek napja
+* A munka ünnepe
+* A Nap napja
+* Anyák napja
+* Madarak és Fák Napja
+* A család nemzetközi napja
+* Nemzetközi férfinap
+* Kihívás napja
+* Gyereknap
+* Pünkösdhétfő
+* Környezetvédelmi világnap
+* Medárd napja
+* Apák napja
+* Semmelweis-nap
+* A Hold napja
+* Nagyboldogasszony napja
+* Az államalapítás ünnepe
+* Európai autómentes nap
+* Az aradi vértanúk emléknapja
+* Földünkért világnap
+* Az 1956-os forradalom ünnepe
+* Őszirózsás forradalom
+* Mindenszentek
+* Halottak napja
 * Black Friday
-* Christmas Day
-* Christmas Eve
-* Cinco de Mayo
-* Columbus Day
 * Cyber Monday
-* Daylight Saving (End)
-* Daylight Saving (Start)
-* Earth Day
-* Easter
-* Father's Day
-* Flag Day
-* Good Friday
-* Groundhog Day
-* Halloween
-* Hanukkah
-* Independence Day
-* Indigenous Peoples' Day
-* Juneteenth
-* Kwanzaa
-* Labor Day
-* Martin Luther King Jr. Day
-* Memorial Day
-* Mother's Day
-* New Year's Day
-* New Year's Eve
-* Orthodox Easter
-* Palm Sunday
-* Passover
-* Patriot Day
-* Pearl Harbor Remembrance Day
-* Presidents' Day
-* Rosh Hashanah
-* St. Patrick's Day
-* Tax Day
-* Thanksgiving
-* Valentine's Day
-* Veterans Day
-* Yom Kippur
+* A Nobel-díj alapításának napja
+* Szenteste
+* Karácsony
+* Karácsony másnap
+* Szilveszter
 
 ### Requirements
 
@@ -273,38 +286,6 @@ $carbon->isBankHoliday(); // boolean (false)
 
 $carbon = Carbon::create(2021, 12, 24); // Friday
 $carbon->isBankHoliday(); // boolean (false)
-```
-
-### isFederalHoliday()
-
-See [documentation](https://castorland.github.io/hu-holidays/#isFederalHoliday) for more details
-
-Check if date is a Federal Holiday and the day it is observed on. I.E. if the holiday falls on Saturday, the holiday is observed the previous day (Friday). Or if a holiday falls on Sunday, the holiday is observed the next day (Monday). Note: Federal holidays are Monday - Friday Only. Holidays that are always on weekends are not consider bank holidays. Returns `boolean`
-
-```php
-$carbon = Carbon::create(2020, 1, 1); // New Years Day - Wednesday
-$carbon->isFederalHoliday(); // boolean (true)
-
-$carbon = Carbon::create(2020, 1, 2);
-$carbon->isFederalHoliday(); // boolean (false)
-
-$carbon = Carbon::create(2018, 03, 17); // St Patrick's Day
-$carbon->isFederalHoliday(); // boolean (false)
-
-$carbon = Carbon::create(2018, 12, 25); // Christmas - Tuesday
-$carbon->isFederalHoliday(); // boolean (true)
-
-$carbon = Carbon::create(2016, 12, 25); // Christmas - Sunday
-$carbon->isFederalHoliday(); // boolean (false)
-
-$carbon = Carbon::create(2016, 12, 26); // Monday
-$carbon->isFederalHoliday(); // boolean (true)
-
-$carbon = Carbon::create(2021, 12, 25); // Christmas - Saturday
-$carbon->isFederalHoliday(); // boolean (false)
-
-$carbon = Carbon::create(2021, 12, 24); // Friday
-$carbon->isFederalHoliday(); // boolean (true)
 ```
 
 ### Get Holiday Name

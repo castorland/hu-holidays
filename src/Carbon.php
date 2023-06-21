@@ -15,14 +15,69 @@ use Exception;
  */
 class Carbon extends \Carbon\Carbon
 {
-
     use Holiday;
     use BusinessDays;
 
     /**
      * Holiday names' array
      */
-    private $holidayArray = ["April Fools' Day", "New Year", "Revolution 48", "Big Friday", "Easter Sunday", "Easter Monday", "Labors' Day", "Whit Sunday", "Whit Monday", "State Foundation", "Revolution 56", "All Saints", "Christmas Day", "Christmas Second Day", "Father's Day", "Mother's Day", "Valentine's Day"];
+    private $holidayArray = [
+        "Újév",
+        "Vízkereszt, a farsang kezdete",
+        "A világirodalom napja",
+        "A vallások világnapja",
+        "A magyar kultúra napja",
+        "A holokauszt nemzetközi emléknapja",
+        "A civilek napja",
+        "Rejtvényfejtők világnapja",
+        "Rákellenes világnap",
+        "Valentin-nap",
+        "A kínai újév kezdete",
+        "Hamvazószerda",
+        "A meteorológiai tavasz kezdete",
+        "Energiatakarékossági világnap",
+        "Nőnap",
+        "Nemzetközi pi nap",
+        "Az 1848-as forradalom ünnepe",
+        "A víz világnapja",
+        "Bolondok napja",
+        "Nagypéntek",
+        "Húsvét hétfő",
+        "Az egészség világnapja",
+        "A magyar költészet napja",
+        "A Föld napja",
+        "A méhek napja",
+        "A munka ünnepe",
+        "A Nap napja",
+        "Anyák napja",
+        "Madarak és Fák Napja",
+        "A család nemzetközi napja",
+        "Nemzetközi férfinap",
+        "Kihívás napja",
+        "Gyereknap",
+        "Pünkösdhétfő",
+        "Környezetvédelmi világnap",
+        "Medárd napja",
+        "Apák napja",
+        "Semmelweis-nap",
+        "A Hold napja",
+        "Nagyboldogasszony napja",
+        "Az államalapítás ünnepe",
+        "Európai autómentes nap",
+        "Az aradi vértanúk emléknapja",
+        "Földünkért világnap",
+        "Az 1956-os forradalom ünnepe",
+        "Őszirózsás forradalom",
+        "Mindenszentek",
+        "Halottak napja",
+        "Black Friday",
+        "Cyber Monday",
+        "A Nobel-díj alapításának napja",
+        "Szenteste",
+        "Karácsony",
+        "Karácsony másnap",
+        "Szilveszter",
+    ];
 
     /**
      * An array of bank holidays
@@ -42,7 +97,7 @@ class Carbon extends \Carbon\Carbon
     /**
      * An array of all holidays to use
      */
-    public function setHolidays($holidays)
+    public function setHolidays(array $holidays)
     {
         foreach ($holidays as $key => $holiday) {
             $holidays[$key] = strtoupper($holiday);
@@ -57,7 +112,7 @@ class Carbon extends \Carbon\Carbon
      * @param array $data The year to get the holidays in
      * @return true;
      */
-    public function addHoliday($data): bool
+    public function addHoliday(array $data): bool
     {
         $this->userAddedHolidays[] = $data;
         $this->holidayArray[] = $data['name'];
@@ -99,7 +154,7 @@ class Carbon extends \Carbon\Carbon
 
         $holidays = $this->holidays($year);
         $holidaySearchNames = array_column($holidays, 'search_names');
-        $holiday_details = array();
+        $holiday_details = [];
 
         if (is_string($name)) {
 
@@ -120,27 +175,21 @@ class Carbon extends \Carbon\Carbon
                 $days_until = $this->diffInDays($date);
 
                 $bankHoliday = $holidays[$index]['bank_holiday'];
-                // if($bankHoliday && $bankHolidayCheck) {
-                //    $date->isBankHoliday();
-                // }
 
-                $federalHoliday = $holidays[$index]['federal_holiday'];
-                // if($federalHoliday && $bankHolidayCheck) {
-                //    $date->isFederalHoliday();
-                // }
+                $holiday = $holidays[$index]['holiday'];
 
                 $details = (object) [
                     'name' => $holidays[$index]['name'],
                     'date' => $date,
                     'bank_holiday' => $bankHoliday,
-                    'federal_holiday' => $federalHoliday,
+                    'holiday' => $holiday,
                     'days_away' => $days_until,
                     'start_year' => $holidays[$index]['start_year'],
                     'end_year' => $holidays[$index]['end_year'],
                     'bank_holiday_start_year' => $holidays[$index]['bank_holiday_start_year'],
                     'bank_holiday_end_year' => $holidays[$index]['bank_holiday_end_year'],
-                    'federal_holiday_start_year' => $holidays[$index]['federal_holiday_start_year'],
-                    'federal_holiday_end_year' => $holidays[$index]['federal_holiday_end_year'],
+                    'holiday_start_year' => $holidays[$index]['holiday_start_year'],
+                    'holiday_end_year' => $holidays[$index]['holiday_end_year'],
                 ];
 
                 if ($holidays[$index]['start_year'] <= $year) {
@@ -148,7 +197,6 @@ class Carbon extends \Carbon\Carbon
                 }
             }
         } elseif (is_array($name)) {
-
 
             foreach ($name as $search_name) {
 
