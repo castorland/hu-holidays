@@ -1,6 +1,12 @@
 {
     "name": "castorland/hu-holidays",
     "description": "Hungarian Holidays Wrapper for the Carbon DateTime Library",
+    "authors": [
+        {
+            "name": "Hódos Gábor",
+            "email": "gabor@hodos.me"
+        }
+    ],
     "keywords": [
         "Hungarian Bank Holiday",
         "Holiday",
@@ -30,12 +36,6 @@
             "Tests\\": "Tests/"
         }
     },
-    "authors": [
-        {
-            "name": "Hódos Gábor",
-            "email": "gabor@hodos.me"
-        }
-    ],
     "config": {
         "discard-changes": true
     },
