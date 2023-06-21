@@ -2,3 +2,4 @@
 codecoverage
 clover.xml
 coverage.xml
+composer.lock
