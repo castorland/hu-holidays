@@ -1,6 +1,6 @@
 <?php
 
-namespace HUHolidays\Traits;
+namespace Castorland\HUHolidays\Traits;
 
 trait BusinessDays
 {

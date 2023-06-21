@@ -1,13 +1,12 @@
 <?php
-
 /**
  * HU Holidays Wrapper for the Carbon DateTime Library
  */
 
-namespace HUHolidays;
+namespace Castorland\HUHolidays;
 
-use HUHolidays\Traits\Holiday;
-use HUHolidays\Traits\BusinessDays;
+use Castorland\HUHolidays\Traits\Holiday;
+use Castorland\HUHolidays\Traits\BusinessDays;
 use Exception;
 
 /**

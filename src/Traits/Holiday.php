@@ -1,61 +1,61 @@
 <?php
 
-namespace HUHolidays\Traits;
+namespace Castorland\HUHolidays\Traits;
 
-use HUHolidays\Carbon;
-use HUHolidays\Traits\Holidays\ACivilekNapja;
-use HUHolidays\Traits\Holidays\ACsaladNemzetkoziNapja;
-use HUHolidays\Traits\Holidays\AFoldNapja;
-use HUHolidays\Traits\Holidays\AHoldNapja;
-use HUHolidays\Traits\Holidays\AHolokausztNemzetkoziEmleknapja;
-use HUHolidays\Traits\Holidays\AKinaiUjevKezdete;
-use HUHolidays\Traits\Holidays\AMagyarKolteszetNapja;
-use HUHolidays\Traits\Holidays\AMagyarKulturaNapja;
-use HUHolidays\Traits\Holidays\AMehekNapja;
-use HUHolidays\Traits\Holidays\AMeteorologiaiTavaszKezdete;
-use HUHolidays\Traits\Holidays\AMunkaUnnepe;
-use HUHolidays\Traits\Holidays\ANapNapja;
-use HUHolidays\Traits\Holidays\ANobelDijAlapitasanakNapja;
-use HUHolidays\Traits\Holidays\AnyakNapja;
-use HUHolidays\Traits\Holidays\ApakNapja;
-use HUHolidays\Traits\Holidays\AVallasokVilagnapja;
-use HUHolidays\Traits\Holidays\AVilagirodalomNapja;
-use HUHolidays\Traits\Holidays\AVizVilagnapja;
-use HUHolidays\Traits\Holidays\Az1848asForradalomUnnepe;
-use HUHolidays\Traits\Holidays\Az1956osForradalomUnnepe;
-use HUHolidays\Traits\Holidays\AzAllamalapitasUnnepe;
-use HUHolidays\Traits\Holidays\AzAradiVertanukEmleknapja;
-use HUHolidays\Traits\Holidays\AzEgeszsegVilagnapja;
-use HUHolidays\Traits\Holidays\BolondokNapja;
-use HUHolidays\Traits\Holidays\EnergiatakarekossagiVilagnap;
-use HUHolidays\Traits\Holidays\EuropaiAutomentesNap;
-use HUHolidays\Traits\Holidays\FoldunkertVilagnap;
-use HUHolidays\Traits\Holidays\Gyereknap;
-use HUHolidays\Traits\Holidays\HalottakNapja;
-use HUHolidays\Traits\Holidays\Hamvazoszerda;
-use HUHolidays\Traits\Holidays\HusvetHetfo;
-use HUHolidays\Traits\Holidays\Karacsony;
-use HUHolidays\Traits\Holidays\KaracsonyMasnap;
-use HUHolidays\Traits\Holidays\KihivasNapja;
-use HUHolidays\Traits\Holidays\KornyezetvedelmiVilagnap;
-use HUHolidays\Traits\Holidays\MadarakEsFakNapja;
-use HUHolidays\Traits\Holidays\MedardNapja;
-use HUHolidays\Traits\Holidays\Mindenszentek;
-use HUHolidays\Traits\Holidays\NagyboldogasszonyNapja;
-use HUHolidays\Traits\Holidays\Nagypentek;
-use HUHolidays\Traits\Holidays\NemzetkoziFerfinap;
-use HUHolidays\Traits\Holidays\NemzetkoziPiNap;
-use HUHolidays\Traits\Holidays\Nonap;
-use HUHolidays\Traits\Holidays\OszirozsasForradalom;
-use HUHolidays\Traits\Holidays\PunkosdHetfo;
-use HUHolidays\Traits\Holidays\RakellenesVilagnap;
-use HUHolidays\Traits\Holidays\RejtvenyfejtokVilagnapja;
-use HUHolidays\Traits\Holidays\SemmelweisNap;
-use HUHolidays\Traits\Holidays\Szenteste;
-use HUHolidays\Traits\Holidays\Szilveszter;
-use HUHolidays\Traits\Holidays\Ujev;
-use HUHolidays\Traits\Holidays\ValentinNap;
-use HUHolidays\Traits\Holidays\VizkeresztaFarsangKezdete;
+use Castorland\HUHolidays\Carbon;
+use Castorland\HUHolidays\Traits\Holidays\ACivilekNapja;
+use Castorland\HUHolidays\Traits\Holidays\ACsaladNemzetkoziNapja;
+use Castorland\HUHolidays\Traits\Holidays\AFoldNapja;
+use Castorland\HUHolidays\Traits\Holidays\AHoldNapja;
+use Castorland\HUHolidays\Traits\Holidays\AHolokausztNemzetkoziEmleknapja;
+use Castorland\HUHolidays\Traits\Holidays\AKinaiUjevKezdete;
+use Castorland\HUHolidays\Traits\Holidays\AMagyarKolteszetNapja;
+use Castorland\HUHolidays\Traits\Holidays\AMagyarKulturaNapja;
+use Castorland\HUHolidays\Traits\Holidays\AMehekNapja;
+use Castorland\HUHolidays\Traits\Holidays\AMeteorologiaiTavaszKezdete;
+use Castorland\HUHolidays\Traits\Holidays\AMunkaUnnepe;
+use Castorland\HUHolidays\Traits\Holidays\ANapNapja;
+use Castorland\HUHolidays\Traits\Holidays\ANobelDijAlapitasanakNapja;
+use Castorland\HUHolidays\Traits\Holidays\AnyakNapja;
+use Castorland\HUHolidays\Traits\Holidays\ApakNapja;
+use Castorland\HUHolidays\Traits\Holidays\AVallasokVilagnapja;
+use Castorland\HUHolidays\Traits\Holidays\AVilagirodalomNapja;
+use Castorland\HUHolidays\Traits\Holidays\AVizVilagnapja;
+use Castorland\HUHolidays\Traits\Holidays\Az1848asForradalomUnnepe;
+use Castorland\HUHolidays\Traits\Holidays\Az1956osForradalomUnnepe;
+use Castorland\HUHolidays\Traits\Holidays\AzAllamalapitasUnnepe;
+use Castorland\HUHolidays\Traits\Holidays\AzAradiVertanukEmleknapja;
+use Castorland\HUHolidays\Traits\Holidays\AzEgeszsegVilagnapja;
+use Castorland\HUHolidays\Traits\Holidays\BolondokNapja;
+use Castorland\HUHolidays\Traits\Holidays\EnergiatakarekossagiVilagnap;
+use Castorland\HUHolidays\Traits\Holidays\EuropaiAutomentesNap;
+use Castorland\HUHolidays\Traits\Holidays\FoldunkertVilagnap;
+use Castorland\HUHolidays\Traits\Holidays\Gyereknap;
+use Castorland\HUHolidays\Traits\Holidays\HalottakNapja;
+use Castorland\HUHolidays\Traits\Holidays\Hamvazoszerda;
+use Castorland\HUHolidays\Traits\Holidays\HusvetHetfo;
+use Castorland\HUHolidays\Traits\Holidays\Karacsony;
+use Castorland\HUHolidays\Traits\Holidays\KaracsonyMasnap;
+use Castorland\HUHolidays\Traits\Holidays\KihivasNapja;
+use Castorland\HUHolidays\Traits\Holidays\KornyezetvedelmiVilagnap;
+use Castorland\HUHolidays\Traits\Holidays\MadarakEsFakNapja;
+use Castorland\HUHolidays\Traits\Holidays\MedardNapja;
+use Castorland\HUHolidays\Traits\Holidays\Mindenszentek;
+use Castorland\HUHolidays\Traits\Holidays\NagyboldogasszonyNapja;
+use Castorland\HUHolidays\Traits\Holidays\Nagypentek;
+use Castorland\HUHolidays\Traits\Holidays\NemzetkoziFerfinap;
+use Castorland\HUHolidays\Traits\Holidays\NemzetkoziPiNap;
+use Castorland\HUHolidays\Traits\Holidays\Nonap;
+use Castorland\HUHolidays\Traits\Holidays\OszirozsasForradalom;
+use Castorland\HUHolidays\Traits\Holidays\PunkosdHetfo;
+use Castorland\HUHolidays\Traits\Holidays\RakellenesVilagnap;
+use Castorland\HUHolidays\Traits\Holidays\RejtvenyfejtokVilagnapja;
+use Castorland\HUHolidays\Traits\Holidays\SemmelweisNap;
+use Castorland\HUHolidays\Traits\Holidays\Szenteste;
+use Castorland\HUHolidays\Traits\Holidays\Szilveszter;
+use Castorland\HUHolidays\Traits\Holidays\Ujev;
+use Castorland\HUHolidays\Traits\Holidays\ValentinNap;
+use Castorland\HUHolidays\Traits\Holidays\VizkeresztaFarsangKezdete;
 
 trait Holiday
 {
@@ -800,7 +800,7 @@ trait Holiday
                 };
             }
 
-            $bankHoliday = $userHoliday['bank_holiday'] ?? false
+            $bankHoliday = $userHoliday['bank_holiday'] ?? false;
 
             $holidays[] =
                 array(

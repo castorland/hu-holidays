@@ -39,12 +39,5 @@
     "config": {
         "discard-changes": true
     },
-    "minimum-stability": "dev",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "HUHolidays\\HUHolidaysServiceProvider"
-            ]
-        }
-    }
+    "minimum-stability": "dev"
 }

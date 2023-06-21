@@ -91,7 +91,7 @@ composer require castorland/hu-holidays
 <?php
 require 'vendor/autoload.php';
 
-use HUHolidays\Carbon;
+use Castorland\HUHolidays\Carbon;
 ```
 
 #### Without Composer
@@ -101,7 +101,7 @@ use HUHolidays\Carbon;
 require 'path/to/nesbot/Carbon.php';
 require 'path/to/castorland/Carbon.php';
 
-use HUHolidays\Carbon;
+use Castorland\HUHolidays\Carbon;
 ```
 
 ### Get Holiday By Year

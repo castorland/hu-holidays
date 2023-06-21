@@ -1,8 +1,8 @@
 <?php
 
-namespace HUHolidays\Traits\Holidays;
+namespace Castorland\HUHolidays\Traits\Holidays;
 
-use HUHolidays\Carbon;
+use Castorland\HUHolidays\Carbon;
 
 trait ANapNapja
 {
