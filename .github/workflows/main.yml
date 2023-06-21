@@ -51,11 +51,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    # - name: Install dependencies
-      # run: composer install --prefer-dist --no-progress
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-interaction
 
-    - name: Composer Install
-      run: composer install --no-interaction --dev
+    # - name: Composer Install
+      # run: composer install --no-interaction --dev
 
     - name: Run Tests
       run: ./vendor/bin/phpunit
