@@ -1,6 +1,6 @@
 <?php
 
-namespace USHolidays\Traits\Holidays;
+namespace Castorland\HUHolidays\Traits\Holidays;
 
 trait CyberMonday
 {

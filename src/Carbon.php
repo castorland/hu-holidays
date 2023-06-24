@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HU Holidays Wrapper for the Carbon DateTime Library
  */
@@ -150,16 +151,14 @@ class Carbon extends \Carbon\Carbon
         if ($name == 'all' || $name == null) $name = $this->holidayArray;
 
         $year = $year ?: $this->year;
-
         $holidays = $this->holidays($year);
         $holidaySearchNames = array_column($holidays, 'search_names');
         $holiday_details = [];
 
         if (is_string($name)) {
-
             $index = false;
             foreach ($holidaySearchNames as $key => $holidaySearchName) {
-                if (array_search(strtoupper($name), $holidaySearchName) !== false) {
+                if (array_search(strtolower($name), $holidaySearchName) !== false) {
                     $index = $key;
                 }
             }
@@ -175,20 +174,15 @@ class Carbon extends \Carbon\Carbon
 
                 $bankHoliday = $holidays[$index]['bank_holiday'];
 
-                $holiday = $holidays[$index]['holiday'];
-
                 $details = (object) [
                     'name' => $holidays[$index]['name'],
                     'date' => $date,
                     'bank_holiday' => $bankHoliday,
-                    'holiday' => $holiday,
                     'days_away' => $days_until,
                     'start_year' => $holidays[$index]['start_year'],
                     'end_year' => $holidays[$index]['end_year'],
                     'bank_holiday_start_year' => $holidays[$index]['bank_holiday_start_year'],
                     'bank_holiday_end_year' => $holidays[$index]['bank_holiday_end_year'],
-                    'holiday_start_year' => $holidays[$index]['holiday_start_year'],
-                    'holiday_end_year' => $holidays[$index]['holiday_end_year'],
                 ];
 
                 if ($holidays[$index]['start_year'] <= $year) {
@@ -218,23 +212,15 @@ class Carbon extends \Carbon\Carbon
                             // $date->isBankHoliday();
                             // }
 
-                            $federalHoliday = $holidays[$index]['federal_holiday'];
-                            // if($federalHoliday && $bankHolidayCheck) {
-                            //    $date->isFederalHoliday();
-                            // }
-
                             $details = (object) [
                                 'name' => $holidays[$index]['name'],
                                 'date' => $date,
                                 'bank_holiday' => $bankHoliday,
-                                'federal_holiday' => $federalHoliday,
                                 'days_away' => $days_until,
                                 'start_year' => $holidays[$index]['start_year'],
                                 'end_year' => $holidays[$index]['end_year'],
                                 'bank_holiday_start_year' => $holidays[$index]['bank_holiday_start_year'],
                                 'bank_holiday_end_year' => $holidays[$index]['bank_holiday_end_year'],
-                                'federal_holiday_start_year' => $holidays[$index]['federal_holiday_start_year'],
-                                'federal_holiday_end_year' => $holidays[$index]['federal_holiday_end_year'],
                             ];
 
                             if ($holidays[$index]['start_year'] <= $year) {
@@ -403,47 +389,6 @@ class Carbon extends \Carbon\Carbon
         }
 
         return $isBankHoliday;
-    }
-
-    /**
-     * Check if a date is a federal holiday. returns boolean
-     *
-     * @return bool
-     */
-    public function isFederalHoliday(): bool
-    {
-        if (!$this->isStandardBusinessDays()) {
-            throw new Exception("Cannot use isFederalHoliday() with non-standard businessDays");
-        }
-
-        $holidays = $this->getHolidaysByYear('no-bank-check');
-        $isFederalHoliday = false;
-
-        foreach ($holidays as $holiday) {
-            $federalHolidayStartYear = $holiday->federal_holiday_start_year ?: $this->year;
-            $federalHolidayendYear = $holiday->federal_holiday_end_year ?: $this->year;
-
-            if ($holiday->federal_holiday && $federalHolidayStartYear <= $this->year && $federalHolidayendYear >= $this->year) {
-                if ($this->isBirthday($holiday->date) && $this->isBusinessDay()) {
-                    $isFederalHoliday = true;
-                    break;
-                } else {
-                    if ($this->dayOfWeek === Carbon::MONDAY) {
-                        if ($this->copy()->subDay()->isBirthday($holiday->date)) {
-                            $isFederalHoliday = true;
-                            break;
-                        }
-                    } else if ($this->dayOfWeek === Carbon::FRIDAY) {
-                        if ($this->copy()->addDay()->isBirthday($holiday->date)) {
-                            $isFederalHoliday = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        return $isFederalHoliday;
     }
 
     /**

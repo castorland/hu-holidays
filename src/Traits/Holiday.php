@@ -26,7 +26,9 @@ use Castorland\HUHolidays\Traits\Holidays\Az1956osForradalomUnnepe;
 use Castorland\HUHolidays\Traits\Holidays\AzAllamalapitasUnnepe;
 use Castorland\HUHolidays\Traits\Holidays\AzAradiVertanukEmleknapja;
 use Castorland\HUHolidays\Traits\Holidays\AzEgeszsegVilagnapja;
+use Castorland\HUHolidays\Traits\Holidays\BlackFriday;
 use Castorland\HUHolidays\Traits\Holidays\BolondokNapja;
+use Castorland\HUHolidays\Traits\Holidays\CyberMonday;
 use Castorland\HUHolidays\Traits\Holidays\EnergiatakarekossagiVilagnap;
 use Castorland\HUHolidays\Traits\Holidays\EuropaiAutomentesNap;
 use Castorland\HUHolidays\Traits\Holidays\FoldunkertVilagnap;
@@ -83,6 +85,8 @@ trait Holiday
     use AzAradiVertanukEmleknapja;
     use AzEgeszsegVilagnapja;
     use BolondokNapja;
+    use BlackFriday;
+    use CyberMonday;
     use EnergiatakarekossagiVilagnap;
     use EuropaiAutomentesNap;
     use FoldunkertVilagnap;
@@ -118,13 +122,14 @@ trait Holiday
      *
      * @param int|null $year The year to get the holidays in
      */
-    private function holidays(int $year = null ) {
-        $this->setTime(0,0,0);
+    private function holidays(int $year = null)
+    {
+        $this->setTime(0, 0, 0);
         $holidays = array(
             array(
                 'name' => "Újév",
-                'search_names' => ["ÚJÉV", "JANUÁR 1"],
-                'date' => function() use ($year) {
+                'search_names' => ["újév", "január 1"],
+                'date' => function () use ($year) {
                     return $this->setUjev($year);
                 },
                 'bank_holiday' => true,
@@ -135,8 +140,8 @@ trait Holiday
             ),
             array(
                 'name' => "Vízkereszt, a farsang kezdete",
-                'search_names' => ["VÍZKERESZT, A FARSANG KEZDETE", "VÍZKERESZT", "FARSANG"],
-                'date' => function() use ($year) {
+                'search_names' => ["vízkereszt, a farsang kezdete", "vízkereszt", "farsang"],
+                'date' => function () use ($year) {
                     return $this->setVizkeresztaFarsangKezdete($year);
                 },
                 'bank_holiday' => false,
@@ -147,8 +152,8 @@ trait Holiday
             ),
             array(
                 'name' => "A világirodalom napja",
-                'search_names' => ["A VILÁGIRODALOM NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a világirodalom napja"],
+                'date' => function () use ($year) {
                     return $this->setAVilagirodalomNapja($year);
                 },
                 'bank_holiday' => false,
@@ -159,8 +164,8 @@ trait Holiday
             ),
             array(
                 'name' => "A vallások világnapja",
-                'search_names' => ["A VALLÁSOK VILÁGNAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a vallások világnapja"],
+                'date' => function () use ($year) {
                     return $this->setAVallasokVilagnapja($year);
                 },
                 'bank_holiday' => false,
@@ -171,8 +176,8 @@ trait Holiday
             ),
             array(
                 'name' => "A magyar kultúra napja",
-                'search_names' => ["A MAGYAR KULTÚRA NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a magyar kultúra napja"],
+                'date' => function () use ($year) {
                     return $this->setAMagyarKulturaNapja($year);
                 },
                 'bank_holiday' => false,
@@ -183,8 +188,8 @@ trait Holiday
             ),
             array(
                 'name' => "A holokauszt nemzetközi emléknapja",
-                'search_names' => ["A HOLOKAUSZT NEMZETKÖZI EMLÉKNAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a holokauszt nemzetközi emléknapja"],
+                'date' => function () use ($year) {
                     return $this->setAHolokausztNemzetkoziEmleknapja($year);
                 },
                 'bank_holiday' => false,
@@ -195,8 +200,8 @@ trait Holiday
             ),
             array(
                 'name' => "A civilek napja",
-                'search_names' => ["A CIVILEK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a civilek napja"],
+                'date' => function () use ($year) {
                     return $this->setACivilekNapja($year);
                 },
                 'bank_holiday' => false,
@@ -207,8 +212,8 @@ trait Holiday
             ),
             array(
                 'name' => "Rejtvényfejtők világnapja",
-                'search_names' => ["REJTVÉNYFEJTŐK VILÁGNAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["rejtvényfejtők világnapja"],
+                'date' => function () use ($year) {
                     return $this->setRejtvenyfejtokVilagnapja($year);
                 },
                 'bank_holiday' => false,
@@ -219,7 +224,7 @@ trait Holiday
             ),
             array(
                 'name' => "Black Friday",
-                'search_names' => ["BLACK FRIDAY", "FEKETE PÉNTEK"],
+                'search_names' => ["black friday", "fekete péntek"],
                 'date' => function () use ($year) {
                     return $this->setBlackFriday($year);
                 },
@@ -231,8 +236,8 @@ trait Holiday
             ),
             array(
                 'name' => "Cyber Monday",
-                'search_names' => ["CYBER MONDAY"],
-                'date' => function() use ($year) {
+                'search_names' => ["cyber monday"],
+                'date' => function () use ($year) {
                     return $this->setCyberMonday($year);
                 },
                 'bank_holiday' => false,
@@ -243,8 +248,8 @@ trait Holiday
             ),
             array(
                 'name' => "Rákellenes világnap",
-                'search_names' => ["RÁKELLENES VILÁGNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["rákellenes világnap"],
+                'date' => function () use ($year) {
                     return $this->setRakellenesVilagnap($year);
                 },
                 'bank_holiday' => false,
@@ -255,8 +260,8 @@ trait Holiday
             ),
             array(
                 'name' => "Valentin-nap",
-                'search_names' => ["VALENTIN NAP", "VALENTIN-NAP", "SZERELMESEK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["valentin nap", "valentin-nap", "szerelmesek napja"],
+                'date' => function () use ($year) {
                     return $this->setValentinNap($year);
                 },
                 'bank_holiday' => false,
@@ -267,8 +272,8 @@ trait Holiday
             ),
             array(
                 'name' => "A kínai újév kezdete",
-                'search_names' => ["A KÍNAI ÚJÉV KEZDETE", "KÍNAI ÚJÉV"],
-                'date' => function() use ($year) {
+                'search_names' => ["a kínai újév kezdete", "kínai újév"],
+                'date' => function () use ($year) {
                     return $this->setAKinaiUjevKezdete($year);
                 },
                 'bank_holiday' => false,
@@ -279,8 +284,8 @@ trait Holiday
             ),
             array(
                 'name' => "Hamvazószerda",
-                'search_names' => ["HAMVAZÓSZERDA", "HAMVAZÓ SZERDA", "NAGYBÖJT"],
-                'date' => function() use ($year) {
+                'search_names' => ["hamvazószerda", "hamvazó szerda", "nagyböjt"],
+                'date' => function () use ($year) {
                     return $this->setHamvazoszerda($year);
                 },
                 'bank_holiday' => false,
@@ -291,8 +296,8 @@ trait Holiday
             ),
             array(
                 'name' => "A meteorológiai tavasz kezdete",
-                'search_names' => ["A METEOROLÓGIAI TAVASZ KEZDETE", "TAVASZ"],
-                'date' => function() use ($year) {
+                'search_names' => ["a meteorológiai tavasz kezdete", "tavasz"],
+                'date' => function () use ($year) {
                     return $this->setAMeteorologiaiTavaszKezdete($year);
                 },
                 'bank_holiday' => false,
@@ -303,8 +308,8 @@ trait Holiday
             ),
             array(
                 'name' => "Energiatakarékossági világnap",
-                'search_names' => ["ENERGIATAKARÉKOSSÁGI VILÁGNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["energiatakarékossági világnap"],
+                'date' => function () use ($year) {
                     return $this->setEnergiatakarekossagiVilagnap($year);
                 },
                 'bank_holiday' => false,
@@ -315,8 +320,8 @@ trait Holiday
             ),
             array(
                 'name' => "Nőnap",
-                'search_names' => ["NŐNAP", "NEMZETKÖZI NŐNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["nőnap", "nemzetközi nőnap"],
+                'date' => function () use ($year) {
                     return $this->setNonap($year);
                 },
                 'bank_holiday' => false,
@@ -327,8 +332,8 @@ trait Holiday
             ),
             array(
                 'name' => "Nemzetközi pi nap",
-                'search_names' => ["NEMZETKÖZI PI NAP", "PI NAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["nemzetközi pi nap", "pi nap"],
+                'date' => function () use ($year) {
                     return $this->setNemzetkoziPiNap($year);
                 },
                 'bank_holiday' => false,
@@ -339,8 +344,8 @@ trait Holiday
             ),
             array(
                 'name' => "Az 1848-as forradalom ünnepe",
-                'search_names' => ["MÁRCIUS 15", "AZ 1848-AS FORRADALOM ÜNNEPE", "1848", "48-AS FORRADALOM", "SZABADSÁGHARC"],
-                'date' => function() use ($year) {
+                'search_names' => ["március 15", "az 1848-as forradalom ünnepe", "1848", "48-as forradalom", "szabadságharc"],
+                'date' => function () use ($year) {
                     return $this->setAz1848asForradalomUnnepe($year);
                 },
                 'bank_holiday' => true,
@@ -351,8 +356,8 @@ trait Holiday
             ),
             array(
                 'name' => "A víz világnapja",
-                'search_names' => ["A VÍZ VILÁGNAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a víz világnapja"],
+                'date' => function () use ($year) {
                     return $this->setAVizVilagnapja($year);
                 },
                 'bank_holiday' => false,
@@ -363,8 +368,8 @@ trait Holiday
             ),
             array(
                 'name' => "Bolondok napja",
-                'search_names' => ["BOLONDOK NAPJA", "APRILIS 1"],
-                'date' => function() use ($year) {
+                'search_names' => ["bolondok napja", "aprilis 1"],
+                'date' => function () use ($year) {
                     return $this->setBolondokNapja($year);
                 },
                 'bank_holiday' => false,
@@ -375,8 +380,8 @@ trait Holiday
             ),
             array(
                 'name' => "Nagypéntek",
-                'search_names' => ["NAGYPÉNTEK"],
-                'date' => function() use ($year) {
+                'search_names' => ["nagypéntek"],
+                'date' => function () use ($year) {
                     return $this->setNagypentek($year);
                 },
                 'bank_holiday' => true,
@@ -387,8 +392,8 @@ trait Holiday
             ),
             array(
                 'name' => "Húsvét hétfő",
-                'search_names' => ["HÚSVÉT HÉTFŐ", "HÚSVÉT", "HÚSVÉTHÉTFŐ"],
-                'date' => function() use ($year) {
+                'search_names' => ["húsvét hétfő", "húsvét", "húsvéthétfő"],
+                'date' => function () use ($year) {
                     return $this->setHusvetHetfo($year);
                 },
                 'bank_holiday' => true,
@@ -399,8 +404,8 @@ trait Holiday
             ),
             array(
                 'name' => "Az egészség világnapja",
-                'search_names' => ["AZ EGÉSZSÉG VILÁGNAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["az egészség világnapja"],
+                'date' => function () use ($year) {
                     return $this->setAzEgeszsegVilagnapja($year);
                 },
                 'bank_holiday' => false,
@@ -411,8 +416,8 @@ trait Holiday
             ),
             array(
                 'name' => "A magyar költészet napja",
-                'search_names' => ["A MAGYAR KÖLTÉSZET NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a magyar költészet napja"],
+                'date' => function () use ($year) {
                     return $this->setAMagyarKolteszetNapja($year);
                 },
                 'bank_holiday' => false,
@@ -423,8 +428,8 @@ trait Holiday
             ),
             array(
                 'name' => "A Föld napja",
-                'search_names' => ["A FÖLD NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a föld napja"],
+                'date' => function () use ($year) {
                     return $this->setAFoldNapja($year);
                 },
                 'bank_holiday' => false,
@@ -435,8 +440,8 @@ trait Holiday
             ),
             array(
                 'name' => "A méhek napja",
-                'search_names' => ["A MÉHEK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a méhek napja"],
+                'date' => function () use ($year) {
                     return $this->setAMehekNapja($year);
                 },
                 'bank_holiday' => false,
@@ -447,8 +452,8 @@ trait Holiday
             ),
             array(
                 'name' => "A munka ünnepe",
-                'search_names' => ["A MUNKA ÜNNEPE"],
-                'date' => function() use ($year) {
+                'search_names' => ["a munka ünnepe"],
+                'date' => function () use ($year) {
                     return $this->setAMunkaUnnepe($year);
                 },
                 'bank_holiday' => true,
@@ -459,8 +464,8 @@ trait Holiday
             ),
             array(
                 'name' => "Anyák napja",
-                'search_names' => ["ANYÁK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["anyák napja"],
+                'date' => function () use ($year) {
                     return $this->setAnyakNapja($year);
                 },
                 'bank_holiday' => false,
@@ -471,8 +476,8 @@ trait Holiday
             ),
             array(
                 'name' => "Madarak és Fák Napja",
-                'search_names' => ["MADARAK ÉS FÁK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["madarak és fák napja"],
+                'date' => function () use ($year) {
                     return $this->setMadarakEsFakNapja($year);
                 },
                 'bank_holiday' => false,
@@ -483,8 +488,8 @@ trait Holiday
             ),
             array(
                 'name' => "A család nemzetközi napja",
-                'search_names' => ["A CSALÁD NEMZETKÖZI NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a család nemzetközi napja"],
+                'date' => function () use ($year) {
                     return $this->setACsaladNemzetkoziNapja($year);
                 },
                 'bank_holiday' => false,
@@ -495,8 +500,8 @@ trait Holiday
             ),
             array(
                 'name' => "Nemzetközi férfinap",
-                'search_names' => ["NEMZETKÖZI FÉRFINAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["nemzetközi férfinap"],
+                'date' => function () use ($year) {
                     return $this->setNemzetkoziFerfinap($year);
                 },
                 'bank_holiday' => false,
@@ -507,8 +512,8 @@ trait Holiday
             ),
             array(
                 'name' => "Kihívás napja",
-                'search_names' => ["KIHÍVÁS NAPJA", "CHALLENGE DAY"],
-                'date' => function() use ($year) {
+                'search_names' => ["kihívás napja", "challenge day"],
+                'date' => function () use ($year) {
                     return $this->setKihivasNapja($year);
                 },
                 'bank_holiday' => false,
@@ -519,8 +524,8 @@ trait Holiday
             ),
             array(
                 'name' => "Gyereknap",
-                'search_names' => ["GYEREKNAP", "GYERMEKNAP", "NEMZETKÖZI GYEREKNAP", "NEMZETKÖZI GYERMEKNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["gyereknap", "gyermeknap", "nemzetközi gyereknap", "nemzetközi gyermeknap"],
+                'date' => function () use ($year) {
                     return $this->setGyereknap($year);
                 },
                 'bank_holiday' => false,
@@ -531,8 +536,8 @@ trait Holiday
             ),
             array(
                 'name' => "Pünkösdhétfő",
-                'search_names' => ["PÜNKÖSDHÉTFŐ", "PÜNKÖSD"],
-                'date' => function() use ($year) {
+                'search_names' => ["pünkösdhétfő", "pünkösd"],
+                'date' => function () use ($year) {
                     return $this->setPunkosdHetfo($year);
                 },
                 'bank_holiday' => true,
@@ -543,8 +548,8 @@ trait Holiday
             ),
             array(
                 'name' => "Környezetvédelmi világnap",
-                'search_names' => ["KÖRNYEZETVÉDELMI VILÁGNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["környezetvédelmi világnap"],
+                'date' => function () use ($year) {
                     return $this->setKornyezetvedelmiVilagnap($year);
                 },
                 'bank_holiday' => false,
@@ -555,8 +560,8 @@ trait Holiday
             ),
             array(
                 'name' => "Medárd napja",
-                'search_names' => ["MEDÁRD NAPJA", "MEDÁRD"],
-                'date' => function() use ($year) {
+                'search_names' => ["medárd napja", "medárd"],
+                'date' => function () use ($year) {
                     return $this->setMedardNapja($year);
                 },
                 'bank_holiday' => false,
@@ -567,8 +572,8 @@ trait Holiday
             ),
             array(
                 'name' => "Apák napja",
-                'search_names' => ["APÁK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["apák napja"],
+                'date' => function () use ($year) {
                     return $this->setApakNapja($year);
                 },
                 'bank_holiday' => false,
@@ -579,8 +584,8 @@ trait Holiday
             ),
             array(
                 'name' => "Semmelweis-nap",
-                'search_names' => ["SEMMELWEIS-NAP", "SEMMELWEIS NAP", "A MAGYAR EGÉSZSÉGÜGY NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["semmelweis-nap", "semmelweis nap", "a magyar egészségügy napja"],
+                'date' => function () use ($year) {
                     return $this->setSemmelweisNap($year);
                 },
                 'bank_holiday' => false,
@@ -591,8 +596,8 @@ trait Holiday
             ),
             array(
                 'name' => "A Hold napja",
-                'search_names' => ["A HOLD NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["a hold napja"],
+                'date' => function () use ($year) {
                     return $this->setAHoldNapja($year);
                 },
                 'bank_holiday' => false,
@@ -603,8 +608,8 @@ trait Holiday
             ),
             array(
                 'name' => "Nagyboldogasszony napja",
-                'search_names' => ["NAGYBOLDOGASSZONY NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["nagyboldogasszony napja"],
+                'date' => function () use ($year) {
                     return $this->setNagyboldogasszonyNapja($year);
                 },
                 'bank_holiday' => false,
@@ -615,8 +620,8 @@ trait Holiday
             ),
             array(
                 'name' => "Az államalapítás ünnepe",
-                'search_names' => ["AZ ÁLLAMALAPÍTÁS ÜNNEPE", "ÁLLAMALAPÍTÁS", "AUGUSZTUS 20"],
-                'date' => function() use ($year) {
+                'search_names' => ["az államalapítás ünnepe", "államalapítás", "augusztus 20"],
+                'date' => function () use ($year) {
                     return $this->setAzAllamalapitasUnnepe($year);
                 },
                 'bank_holiday' => true,
@@ -627,8 +632,8 @@ trait Holiday
             ),
             array(
                 'name' => "Európai autómentes nap",
-                'search_names' => ["EURÓPAI AUTÓMENTES NAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["európai autómentes nap"],
+                'date' => function () use ($year) {
                     return $this->setEuropaiAutomentesNap($year);
                 },
                 'bank_holiday' => false,
@@ -639,8 +644,8 @@ trait Holiday
             ),
             array(
                 'name' => "Az aradi vértanúk emléknapja",
-                'search_names' => ["AZ ARADI VÉRTANÚK EMLÉKNAPJA", "ARADI VÉRTANÚK"],
-                'date' => function() use ($year) {
+                'search_names' => ["az aradi vértanúk emléknapja", "aradi vértanúk"],
+                'date' => function () use ($year) {
                     return $this->setAzAradiVertanukEmleknapja($year);
                 },
                 'bank_holiday' => false,
@@ -651,8 +656,8 @@ trait Holiday
             ),
             array(
                 'name' => "Földünkért világnap",
-                'search_names' => ["FÖLDÜNKÉRT VILÁGNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["földünkért világnap"],
+                'date' => function () use ($year) {
                     return $this->setFoldunkertVilagnap($year);
                 },
                 'bank_holiday' => false,
@@ -663,8 +668,8 @@ trait Holiday
             ),
             array(
                 'name' => "Az 1956-os forradalom ünnepe",
-                'search_names' => ["AZ 1956-OS FORRADALOM ÜNNEPE", "56", "OKTÓBER 23"],
-                'date' => function() use ($year) {
+                'search_names' => ["az 1956-os forradalom ünnepe", "56", "október 23"],
+                'date' => function () use ($year) {
                     return $this->setAz1956osForradalomUnnepe($year);
                 },
                 'bank_holiday' => true,
@@ -675,8 +680,8 @@ trait Holiday
             ),
             array(
                 'name' => "Őszirózsás forradalom",
-                'search_names' => ["ŐSZIRÓZSÁS FORRADALOM"],
-                'date' => function() use ($year) {
+                'search_names' => ["őszirózsás forradalom"],
+                'date' => function () use ($year) {
                     return $this->setOszirozsasForradalom($year);
                 },
                 'bank_holiday' => false,
@@ -687,8 +692,8 @@ trait Holiday
             ),
             array(
                 'name' => "Mindenszentek",
-                'search_names' => ["MINDENSZENTEK"],
-                'date' => function() use ($year) {
+                'search_names' => ["mindenszentek"],
+                'date' => function () use ($year) {
                     return $this->setMindenszentek($year);
                 },
                 'bank_holiday' => true,
@@ -699,8 +704,8 @@ trait Holiday
             ),
             array(
                 'name' => "Halottak napja",
-                'search_names' => ["HALOTTAK NAPJA"],
-                'date' => function() use ($year) {
+                'search_names' => ["halottak napja"],
+                'date' => function () use ($year) {
                     return $this->setHalottakNapja($year);
                 },
                 'bank_holiday' => false,
@@ -711,8 +716,8 @@ trait Holiday
             ),
             array(
                 'name' => "A Nobel-díj alapításának napja",
-                'search_names' => ["A NOBEL-DÍJ ALAPÍTÁSÁNAK NAPJA", "NOBEL-DÍJ", "NOBEL DÍJ"],
-                'date' => function() use ($year) {
+                'search_names' => ["a nobel-díj alapításának napja", "nobel-díj", "nobel díj"],
+                'date' => function () use ($year) {
                     return $this->setANobelDijAlapitasanakNapja($year);
                 },
                 'bank_holiday' => false,
@@ -723,8 +728,8 @@ trait Holiday
             ),
             array(
                 'name' => "Szenteste",
-                'search_names' => ["SZENTESTE"],
-                'date' => function() use ($year) {
+                'search_names' => ["szenteste"],
+                'date' => function () use ($year) {
                     return $this->setSzenteste($year);
                 },
                 'bank_holiday' => false,
@@ -735,8 +740,8 @@ trait Holiday
             ),
             array(
                 'name' => "Karácsony",
-                'search_names' => ["KARÁCSONY"],
-                'date' => function() use ($year) {
+                'search_names' => ["karácsony"],
+                'date' => function () use ($year) {
                     return $this->setKaracsony($year);
                 },
                 'bank_holiday' => true,
@@ -747,8 +752,8 @@ trait Holiday
             ),
             array(
                 'name' => "Karácsony Másnap",
-                'search_names' => ["KARÁCSONY MÁSNAP"],
-                'date' => function() use ($year) {
+                'search_names' => ["karácsony másnap"],
+                'date' => function () use ($year) {
                     return $this->setKaracsonyMasnap($year);
                 },
                 'bank_holiday' => true,
@@ -759,8 +764,8 @@ trait Holiday
             ),
             array(
                 'name' => "Szilveszter",
-                'search_names' => ["SZILVESZTER"],
-                'date' => function() use ($year) {
+                'search_names' => ["szilveszter"],
+                'date' => function () use ($year) {
                     return $this->setSzilveszter($year);
                 },
                 'bank_holiday' => false,
@@ -773,12 +778,12 @@ trait Holiday
 
         foreach ($holidays as $key => $holiday) {
 
-            if(!in_array($holiday['name'], $this->holidayArray) && !array_intersect($holiday['search_names'], $this->holidayArray)) {
+            if (!in_array($holiday['name'], $this->holidayArray) && !array_intersect($holiday['search_names'], $this->holidayArray)) {
                 unset($holidays[$key]);
             }
 
-            if($this->bankHolidayArray != ['default']) {
-                if(in_array($holiday['name'], $this->bankHolidayArray) || array_intersect($holiday['search_names'], $this->bankHolidayArray)) {
+            if ($this->bankHolidayArray != ['default']) {
+                if (in_array($holiday['name'], $this->bankHolidayArray) || array_intersect($holiday['search_names'], $this->bankHolidayArray)) {
                     $holidays[$key]['bank_holiday'] = true;
                 } else {
                     $holidays[$key]['bank_holiday'] = false;
@@ -790,10 +795,10 @@ trait Holiday
 
         foreach ($userHolidays as $userHoliday) {
 
-            if(is_callable($userHoliday['date'])) {
+            if (is_callable($userHoliday['date'])) {
                 $date = $userHoliday['date'];
             } else {
-                $date = function() use ($year, $userHoliday) {
+                $date = function () use ($year, $userHoliday) {
                     $day = $userHoliday['date']->day;
                     $month = $userHoliday['date']->month;
                     return Carbon::create($year, $month, $day, 0, 0, 0);
@@ -805,7 +810,7 @@ trait Holiday
             $holidays[] =
                 array(
                     'name' => $userHoliday['name'],
-                    'search_names' => [\strtoupper($userHoliday['name']), \strtoupper(\str_replace("'", '', $userHoliday['name']))],
+                    'search_names' => [\strtoupper($userholiday['name']), \strtoupper(\str_replace("'", '', $userholiday['name']))],
                     'date' => $date,
                     'bank_holiday' => $bankHoliday,
 
