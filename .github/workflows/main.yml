@@ -57,10 +57,13 @@ jobs:
     - name: Run Tests
       run: ./vendor/bin/phpunit --testdox
 
+    - name: Run Codecov Tests
+      run: ./vendor/bin/phpunit --coverage-clover ./build/coverage/codecov.xml
+
     - name: Code coverage
       if: ${{ matrix.coverage == 'true' }}
       uses: codecov/codecov-action@v2
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
-        files: ./build/logs/codecov.xml
+        files: ./build/coverage/codecov.xml
