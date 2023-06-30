@@ -92,7 +92,7 @@ class Carbon extends \Carbon\Carbon
     /**
      * An array of all the user added holidays
      */
-    private $userAddedHolidays = array();
+    private $userAddedHolidays = [];
 
     /**
      * An array of all holidays to use
@@ -100,7 +100,7 @@ class Carbon extends \Carbon\Carbon
     public function setHolidays(array $holidays)
     {
         foreach ($holidays as $key => $holiday) {
-            $holidays[$key] = strtoupper($holiday);
+            $holidays[$key] = strtolower($holiday);
         }
 
         $this->holidayArray = $holidays;
@@ -194,7 +194,7 @@ class Carbon extends \Carbon\Carbon
             foreach ($name as $search_name) {
 
                 foreach ($holidaySearchNames as $key => $holidaySearchName) {
-                    if (array_search(strtoupper($search_name), $holidaySearchName) !== false) {
+                    if (array_search(strtolower($search_name), $holidaySearchName) !== false) {
                         $index = $key;
 
                         if ($index >= 0 && $index !== false) {
@@ -231,7 +231,6 @@ class Carbon extends \Carbon\Carbon
                 }
             }
         }
-
         usort($holiday_details, array($this, "compareDate"));
 
         return $holiday_details;
@@ -251,7 +250,6 @@ class Carbon extends \Carbon\Carbon
         if ($holidays === null || $holidays === 'all') {
             $holidays = $this->holidayArray;
         }
-
         if ($days > 0) {
             $searchStartDate = $this->copy();
             $searchEndDate = $this->copy()->addDays($days)->year;
@@ -261,7 +259,6 @@ class Carbon extends \Carbon\Carbon
             $searchEndDate = $this->copy()->year;
             $searchStartDate = $this->copy()->subDays($days);
         }
-
 
         $holidaysInRange = array();
         for ($i = $searchStartDate->year; $i <= $searchEndDate; $i++) {
@@ -273,7 +270,6 @@ class Carbon extends \Carbon\Carbon
                 }
             }
         }
-
 
         return $holidaysInRange;
     }
@@ -288,7 +284,6 @@ class Carbon extends \Carbon\Carbon
     {
         $this->shiftTimezone('UTC');
         $this->setTime(0, 0);
-
         if ($years > 0) {
             $days = $this->diffInDays($this->copy()->addYears($years));
         } else {
@@ -349,7 +344,7 @@ class Carbon extends \Carbon\Carbon
     public function setBankHolidays($holidays)
     {
         foreach ($holidays as $key => $holiday) {
-            $holidays[$key] = strtoupper($holiday);
+            $holidays[$key] = strtolower($holiday);
         }
 
         return $this->bankHolidayArray = $holidays;
@@ -446,7 +441,6 @@ class Carbon extends \Carbon\Carbon
     public function getPrevHolidays(int $number = 1): array
     {
         $number_of_years = ceil($number / count($this->holidayArray)) * -1;
-
         $holidays = $this->getHolidaysInYears($number_of_years);
         $count = count($holidays);
 
