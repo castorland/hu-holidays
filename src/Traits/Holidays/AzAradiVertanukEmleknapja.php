@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait AzAradiVertanukEmleknapja
 {
     /**
-     * Setting New Years Day
+     * Setting Az Aradi Vértanúk emléknapja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait AzAradiVertanukEmleknapja
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Az Aradi Vértanúk emléknapja for given year
      *
      * @param int|null $year The year to get the holiday in
      */

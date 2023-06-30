@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait AFoldNapja
 {
     /**
-     * Setting New Years Day
+     * Setting A föld napja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait AFoldNapja
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of A föld napja for given year
      *
      * @param int|null $year The year to get the holiday in
      */

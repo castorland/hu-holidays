@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait NemzetkoziPiNap
 {
     /**
-     * Setting New Years Day
+     * Setting Nemzetközi PI nap holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait NemzetkoziPiNap
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Nemzetközi PI nap for given year
      *
      * @param int|null $year The year to get the holiday in
      */

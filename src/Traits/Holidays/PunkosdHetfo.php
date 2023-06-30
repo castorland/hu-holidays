@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait PunkosdHetfo
 {
     /**
-     * Setting New Years Day
+     * Setting Pünkösdhétfő holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait PunkosdHetfo
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Pünkösdhétfő for given year
      *
      * @param int|null $year The year to get the holiday in
      */

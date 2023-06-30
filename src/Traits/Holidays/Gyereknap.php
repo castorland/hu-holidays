@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait Gyereknap
 {
     /**
-     * Setting April Fools Day
+     * Setting Gyereknap holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait Gyereknap
     }
 
     /**
-      * Return object of April Fools Day for given year
+      * Return object of Gyereknap for given year
       *
       * @param int|null $year The year to get the holiday in
       */

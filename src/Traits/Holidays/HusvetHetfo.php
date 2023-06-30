@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait HusvetHetfo
 {
     /**
-     * Setting April Fools Day
+     * Setting Húsvéthétfő holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait HusvetHetfo
     }
 
     /**
-      * Return object of April Fools Day for given year
+      * Return object of Húsvéthétfő for given year
       *
       * @param int|null $year The year to get the holiday in
       */

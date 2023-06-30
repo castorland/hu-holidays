@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait AMeteorologiaiTavaszKezdete
 {
     /**
-     * Setting New Years Day
+     * Setting a meterológiai tavasz kezdete holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait AMeteorologiaiTavaszKezdete
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of a meterológiai tavasz kezdete for given year
      *
      * @param int|null $year The year to get the holiday in
      */

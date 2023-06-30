@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait ANobelDijAlapitasanakNapja
 {
     /**
-     * Setting New Years Day
+     * Setting a nobel díj alapításának napja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait ANobelDijAlapitasanakNapja
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of a nobel díj alapításának napja for given year
      *
      * @param int|null $year The year to get the holiday in
      */

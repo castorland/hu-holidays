@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait AMunkaUnnepe
 {
     /**
-     * Setting New Years Day
+     * Setting a munka ünnepe holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait AMunkaUnnepe
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of a munka ünnepe for given year
      *
      * @param int|null $year The year to get the holiday in
      */

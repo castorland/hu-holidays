@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait ACivilekNapja
 {
     /**
-     * Setting New Years Day
+     * Setting A Civilek Napja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait ACivilekNapja
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of A Civilek Napja for given year
      *
      * @param int|null $year The year to get the holiday in
      */

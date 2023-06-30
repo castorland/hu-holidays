@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait Nonap
 {
     /**
-     * Setting New Years Day
+     * Setting Nőnap holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait Nonap
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Nőnap for given year
      *
      * @param int|null $year The year to get the holiday in
      */

@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait VizkeresztaFarsangKezdete
 {
     /**
-     * Setting New Years Day
+     * Setting Vízkereszt, a farsang kezdete
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait VizkeresztaFarsangKezdete
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Vízkereszt, a farsang kezdete for given year
      *
      * @param int|null $year The year to get the holiday in
      */

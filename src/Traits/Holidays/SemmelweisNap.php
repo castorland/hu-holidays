@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait SemmelweisNap
 {
     /**
-     * Setting New Years Day
+     * Setting Semmelweis-nap, a magyar egészségügy napja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait SemmelweisNap
     }
 
     /**
-     * Return object of New Years Day for given year
+     * Return object of Semmelweis-nap, a magyar egészségügy napja for given year
      *
      * @param int|null $year The year to get the holiday in
      */

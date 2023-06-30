@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait ApakNapja
 {
     /**
-     * Setting April Fools Day
+     * Setting Apák napja holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -17,7 +17,7 @@ trait ApakNapja
     }
 
     /**
-      * Return object of April Fools Day for given year
+      * Return object of Apák napja for given year
       *
       * @param int|null $year The year to get the holiday in
       */

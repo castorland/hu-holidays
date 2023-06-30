@@ -7,7 +7,7 @@ use Castorland\HUHolidays\Carbon;
 trait BlackFriday
 {
     /**
-     * Setting April Fools Day
+     * Setting Black Friday holiday for given year
      *
      * @param int $year The year to get the holiday in
      */
@@ -23,7 +23,7 @@ trait BlackFriday
     }
 
     /**
-      * Return object of April Fools Day for given year
+      * Return object of Black Friday for given year
       *
       * @param int|null $year The year to get the holiday in
       */
