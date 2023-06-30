@@ -128,7 +128,7 @@ trait Holiday
         $holidays = array(
             array(
                 'name' => "Újév",
-                'search_names' => ["újév", "január 1"],
+                'search_names' => ["Újév", "január 1"],
                 'date' => function () use ($year) {
                     return $this->setUjev($year);
                 },
@@ -810,16 +810,13 @@ trait Holiday
             $holidays[] =
                 array(
                     'name' => $userHoliday['name'],
-                    'search_names' => [\strtoupper($userholiday['name']), \strtoupper(\str_replace("'", '', $userholiday['name']))],
+                    'search_names' => [\strtolower($userHoliday['name']), \strtolower(\str_replace("'", '', $userHoliday['name']))],
                     'date' => $date,
                     'bank_holiday' => $bankHoliday,
-
                     'start_year' => null,
                     'end_year' => null,
                     'bank_holiday_start_year' => null,
                     'bank_holiday_end_year' => null,
-
-
                 );
         }
 
