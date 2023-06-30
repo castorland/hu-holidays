@@ -3,3 +3,6 @@ codecoverage
 clover.xml
 coverage.xml
 composer.lock
+log
+src/Log.php
+.phpunit.result.cache
