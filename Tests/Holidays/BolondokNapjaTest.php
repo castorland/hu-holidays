@@ -38,7 +38,7 @@ class BolondokNapjaTest extends TestCase
 
     public function testIsBankHoliday()
     {
-        $holiday = Carbon::create(2021, 1, 1)->getBolondokNapjaHoliday();
+        $holiday = Carbon::create(2023, 1, 1)->getBolondokNapjaHoliday();
 
         $this->assertFalse($holiday->date->isBankHoliday());
     }

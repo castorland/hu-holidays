@@ -11,15 +11,15 @@ class NagypentekTest extends TestCase
     {
         $carbon = Carbon::create(2023, 1, 1);
 
-        // $this->assertFalse(
-        //     $carbon->getNagypentekHoliday()->date->setTimezone('Europe/Budapest')
-        //         ->isSameDay(Carbon::createFromDate(2023, 4, 1))
-        // );
+        $this->assertFalse(
+            $carbon->getNagypentekHoliday()->date->setTimezone('Europe/Budapest')
+                ->isSameDay(Carbon::createFromDate(2023, 4, 1))
+        );
 
-        // $this->assertTrue(
-        //     $carbon->getNagypentekHoliday()->date->setTimezone('Europe/Budapest')
-        //         ->isSameDay(Carbon::createFromDate(2023, 4, 7))
-        // );
+        $this->assertTrue(
+            $carbon->getNagypentekHoliday()->date->setTimezone('Europe/Budapest')
+                ->isSameDay(Carbon::createFromDate(2023, 4, 7))
+        );
     }
 
     public function testHolidayName()
