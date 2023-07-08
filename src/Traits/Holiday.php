@@ -680,7 +680,7 @@ trait Holiday
             ),
             array(
                 'name' => "Őszirózsás forradalom",
-                'search_names' => ["őszirózsás forradalom"],
+                'search_names' => ["Őszirózsás forradalom"],
                 'date' => function () use ($year) {
                     return $this->setOszirozsasForradalom($year);
                 },

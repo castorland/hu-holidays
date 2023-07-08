@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use Castorland\HUHolidays\Carbon;
+use Castorland\HUHolidays\Log;
 
 class CarbonTest extends TestCase
 {
@@ -71,7 +72,7 @@ class CarbonTest extends TestCase
         $holidays = $carbon->getHolidaysInDays(300, 'all');
 
         $this->assertFalse(count($holidays) == 3);
-        $this->assertTrue(count($holidays) == 43);
+        $this->assertTrue(count($holidays) == 44);
 
         $carbon = Carbon::create(2020, 1, 5);
         $holidays = $carbon->getHolidaysInDays(360, ["Karácsony"]);
@@ -98,13 +99,13 @@ class CarbonTest extends TestCase
         $holidays = $carbon->getHolidaysInYears(1, 'all');
 
         $this->assertFalse(count($holidays) == 40);
-        $this->assertTrue(count($holidays) == 52);
+        $this->assertTrue(count($holidays) == 54);
 
         $carbon = Carbon::create(2020, 1, 5, 1, 0, 0);
         $holidays = $carbon->getHolidaysInYears(1, 'all');
 
         $this->assertFalse(count($holidays) == 40);
-        $this->assertTrue(count($holidays) == 52);
+        $this->assertTrue(count($holidays) == 54);
     }
 
     public function testAddUserHoliday()

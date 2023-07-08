@@ -23,6 +23,6 @@ trait SemmelweisNap
      */
     public function getSemmelweisNapHoliday(int $year = null)
     {
-        return $this->getHolidaysByYear("Semmelweis-nap, a magyar egészségügy napja", $year)[0];
+        return $this->getHolidaysByYear("Semmelweis-nap", $year)[0];
     }
 }

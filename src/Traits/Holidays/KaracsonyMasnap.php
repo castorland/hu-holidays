@@ -23,6 +23,6 @@ trait KaracsonyMasnap
      */
     public function getKaracsonyMasnapHoliday(int $year = null)
     {
-        return $this->getHolidaysByYear("Karácsony másnap", $year)[0];
+        return $this->getHolidaysByYear("Karácsony Másnap", $year)[0];
     }
 }

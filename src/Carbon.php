@@ -75,7 +75,7 @@ class Carbon extends \Carbon\Carbon
         "A Nobel-díj alapításának napja",
         "Szenteste",
         "Karácsony",
-        "Karácsony másnap",
+        "Karácsony Másnap",
         "Szilveszter",
     ];
 

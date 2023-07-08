@@ -13,7 +13,7 @@ trait NagyboldogasszonyNapja
      */
     private function setNagyboldogasszonyNapja(int $year)
     {
-        return Carbon::create($year, 8, 18, 0, 0, 0);
+        return Carbon::create($year, 8, 15, 0, 0, 0);
     }
 
     /**
