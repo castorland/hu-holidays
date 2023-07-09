@@ -18,7 +18,7 @@ class HamvazoszerdaTest extends TestCase
 
         $this->assertTrue(
             $carbon->getHamvazoszerdaHoliday()->date->setTimezone('Europe/Budapest')
-                ->isSameDay(Carbon::createFromDate(2023, 2, 21))
+                ->isSameDay(Carbon::createFromDate(2023, 2, 22))
         );
     }
 
