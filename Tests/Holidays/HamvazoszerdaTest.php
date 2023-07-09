@@ -12,12 +12,12 @@ class HamvazoszerdaTest extends TestCase
         $carbon = Carbon::create(2023, 1, 1);
 
         $this->assertFalse(
-            $carbon->getHamvazoszerdaHoliday()->date
+            $carbon->getHamvazoszerdaHoliday()->date->setTimezone('Europe/Budapest')
                 ->isSameDay(Carbon::createFromDate(2023, 2, 18))
         );
 
         $this->assertTrue(
-            $carbon->getHamvazoszerdaHoliday()->date
+            $carbon->getHamvazoszerdaHoliday()->date->setTimezone('Europe/Budapest')
                 ->isSameDay(Carbon::createFromDate(2023, 2, 21))
         );
     }
@@ -40,6 +40,6 @@ class HamvazoszerdaTest extends TestCase
     {
         $holiday = Carbon::create(2021, 1, 1)->getHamvazoszerdaHoliday();
 
-        $this->assertFalse($holiday->date->isBankHoliday());
+        $this->assertFalse($holiday->date->setTimezone('Europe/Budapest')->isBankHoliday());
     }
 }
