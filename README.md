@@ -114,16 +114,16 @@ $holidays = $carbon->getHolidaysByYear('all');
 
 // [
 //     {
-//         "name": "New Year's Day", // string
+//         "name": "Újév", // string
 //         "date": "2020-01-01 00:00:00", // DateTime object
 //         "bank_holiday": true, // boolean
 //         "days_away": 0, // int
 //     },
 //     {
-//      "name": "Martin Luther King Jr. Day", // string
-//      "date": "2020-01-20 00:00:00", // DateTime object
-//      "bank_holiday": true, // boolean
-//      "days_away": 19 // int
+//      "name": "Vízkereszt, a farsang kezdete", // string
+//      "date": "2020-01-06 00:00:00", // DateTime object
+//      "bank_holiday": false, // boolean
+//      "days_away": 5 // int
 //     }
 //     ...
 // ]
@@ -134,7 +134,7 @@ $holidays = $carbon->getHolidaysByYear('all');
 See [documentation](https://castorland.github.io/hu-holidays/#getHolidaysInDays) for more details
 
 ```php
-$carbon = Carbon::create(2020, 5, 28);
+$carbon = Carbon::create(2020, 5, 2);
 
 $holidays = $carbon->getHolidaysInDays(300, 'all');
 // or
@@ -142,15 +142,15 @@ $holidays = $carbon->getHolidaysInDays(300);
 
 // [
 //     {
-//         "name": "Flag Day", // string
-//         "date": "2020-06-14 00:00:00", // DateTime object
+//         "name": "A Nap napja", // string
+//         "date": "2020-05-03 00:00:00", // DateTime object
 //         "bank_holiday": false, // boolean
-//         "days_away": 17 // int
+//         "days_away": 1 // int
 //     }, {
-//         "name": "Juneteenth", // string
-//         "date": "2020-06-19 00:00:00", // DateTime object
+//         "name": "Madarak és Fák Napja", // string
+//         "date": "2020-05-10 00:00:00", // DateTime object
 //         "bank_holiday": false, // boolean
-//         "days_away": 22 // int
+//         "days_away": 8 // int
 //     },
 //     ...
 // ]
@@ -169,15 +169,15 @@ $holidays = $carbon->getHolidaysInYears(1);
 
 // [
 //     {
-//      "name": "Labor Day", // string
-//      "date": "2020-09-07 00:00:00", // DateTime object
+//      "name": "Az államalapítás ünnepe", // string
+//      "date": "2020-08-20 00:00:00", // DateTime object
 //      "bank_holiday": true,// boolean
-//      "days_away": 20 // int
+//      "days_away": 2 // int
 //     }, {
-//      "name": "Patriot Day", // string
-//      "date": "2020-09-11 00:00:00", // DateTime object
+//      "name": "Európai autómentes nap", // string
+//      "date": "2020-09-22 00:00:00", // DateTime object
 //      "bank_holiday": false, // boolean
-//      "days_away": 24 // int
+//      "days_away": 35 // int
 //     },
 //     ...
 // ]
@@ -185,14 +185,14 @@ $holidays = $carbon->getHolidaysInYears(1);
 
 ### Get Holiday Date
 
-See [documentation](https://castorland.github.io/hu-holidays/#getAprilFoolsDayHoliday) for more details
+See [documentation](https://castorland.github.io/hu-holidays/#getBolondokNapjaHoliday) for more details
 
 ```php
 $carbon = Carbon::create(2020, 1, 1);
-$carbon->getAprilFoolsDayHoliday();
+$carbon->getBolondokNapjaHoliday();
 
 // {
-//    "name": "April Fool's Day",
+//    "name": "Bolondok napja",
 //    "date": "2020-04-01 00:00:00",
 //    "bank_holiday": false
 //    "days_away": 91
@@ -200,48 +200,60 @@ $carbon->getAprilFoolsDayHoliday();
 ```
 
 ```php
-$carbon->getAprilFoolsDayHoliday();
-$carbon->getArmedForcesDayHoliday();
-$carbon->getAshWednesdayHoliday();
+$carbon->getACivilekNapjaHoliday();
+$carbon->getACsaladNemzetkoziNapjaHoliday();
+$carbon->getAFoldNapja();
+$carbon->getAHoldNapja();
+$carbon->getAHolokausztNemzetkoziEmleknapjaHoliday();
+$carbon->getAKinaiUjevKezdeteHoliday();
+$carbon->getAMagyarKolteszetNapjaHoliday();
+$carbon->getAMagyarKulturaNapjaHoliday();
+$carbon->getAMehekNapjaHoliday();
+$carbon->getAMeteorologiaiTavaszKezdeteHoliday();
+$carbon->getAMunkaUnnepeHoliday();
+$carbon->getANapNapjaHoliday();
+$carbon->getANobelDijAlapitasanakNapjaHoliday();
+$carbon->getAnyakNapjaHoliday();
+$carbon->getApakNapjaHoliday();
+$carbon->getAVallasokVilagnapjaHoliday();
+$carbon->getAVilagirodalomNapjaHoliday();
+$carbon->getAVizVilagnapjaHoliday();
+$carbon->getAz1848asForradalomUnnepeHoliday();
+$carbon->getAz1956osForradalomUnnepeHoliday();
+$carbon->getAzAllamalapitasUnnepeHoliday();
+$carbon->getAzAradiVertanukEmleknapjaHoliday();
+$carbon->getAzEgeszsegVilagnapjaHoliday();
 $carbon->getBlackFridayHoliday();
-$carbon->getChristmasDayHoliday();
-$carbon->getChristmasEveHoliday();
-$carbon->getCincoDeMayoHoliday();
-$carbon->getColumbusDayHoliday();
+$carbon->getBolondokNapjaHoliday();
 $carbon->getCyberMondayHoliday();
-$carbon->getDaylightSavingEndHoliday();
-$carbon->getDaylightSavingStartHoliday();
-$carbon->getEarthDayHoliday();
-$carbon->getEasterHoliday();
-$carbon->getFathersDayHoliday();
-$carbon->getFlagDayHoliday();
-$carbon->getGoodFridayHoliday();
-$carbon->getGroundhogDayHoliday();
-$carbon->getHalloweenHoliday();
-$carbon->getHanukkahHoliday();
-$carbon->getIndependenceDayHoliday();
-$carbon->getIndigenousPeoplesDayHoliday();
-$carbon->getJuneteenthHoliday();
-$carbon->getKwanzaaHoliday();
-$carbon->getLaborDayHoliday();
-$carbon->getMLKDayHoliday();
-$carbon->getMemorialDayHoliday();
-$carbon->getMothersDayHoliday();
-$carbon->getNewYearsDayHoliday();
-$carbon->getNewYearsEveHoliday();
-$carbon->getOrthodoxEasterHoliday();
-$carbon->getPalmSundayHoliday();
-$carbon->getPassoverHoliday();
-$carbon->getPatriotDayHoliday();
-$carbon->getPearlHarborRemembranceDayHoliday();
-$carbon->getPresidentsDayHoliday();
-$carbon->getRoshHashanahHoliday();
-$carbon->getStPatricksDayHoliday();
-$carbon->getTaxDayHoliday();
-$carbon->getThanksgivingHoliday();
-$carbon->getValentinesDayHoliday();
-$carbon->getVeteransDayHoliday();
-$carbon->getYomKippurHoliday();
+$carbon->getEnergiatakarekossagiVilagnapHoliday();
+$carbon->getEuropaiAutomentesNapHoliday();
+$carbon->getFoldunkertVilagnapHoliday();
+$carbon->getGyerenapHoliday();
+$carbon->getHalottakNapjaHoliday();
+$carbon->getHamvazoszerdaHoliday();
+$carbon->getHusvetHetfoHoliday();
+$carbon->getKaracsonyHoliday();
+$carbon->getKaracsonyMasnapHoliday();
+$carbon->getKihivasNapjaHoliday();
+$carbon->getKornyezetvedelmiVilagnapHoliday();
+$carbon->getMadarakEsFakNapjaHoliday();
+$carbon->getMedardNapjaHoliday();
+$carbon->getMindenszentekHoliday();
+$carbon->getNagyboldogasszonyNapjaHoliday();
+$carbon->getNagypentekHoliday();
+$carbon->getNemzetkoziFerfinapHoliday();
+$carbon->getNemzetkoziPiNapHoliday();
+$carbon->getNonapHoliday();
+$carbon->getOszirozsasForradalomHoliday();
+$carbon->getPunkosdHetfoHoliday();
+$carbon->getRakellenesVilagnapHoliday();
+$carbon->getRejtvenyfejtokVilagnapjaHoliday();
+$carbon->getSemmelweisNapHoliday();
+$carbon->getSzentesteHoliday();
+$carbon->getSzilveszterHoliday();
+$carbon->getUjevHoliday();
+$carbon->getVizkeresztaFarsangKezdeteHoliday();
 ```
 
 ### isHoliday()
@@ -263,28 +275,28 @@ See [documentation](https://castorland.github.io/hu-holidays/#isBankHoliday) for
 Check if date is a Bank Holiday and the day it is observed on. I.E. if the holiday falls if a holiday falls on Sunday, the holiday is observed the next day (Monday). Note: Bank holidays are Monday - Friday Only. Holidays that are always on weekends are not consider bank holidays. Also holidays that are Bank Holidays but fall on Saturday are NOT observed on the previous Friday. Returns `boolean`
 
 ```php
-$carbon = Carbon::create(2020, 1, 1); // New Years Day - Wednesday
+$carbon = Carbon::create(2020, 1, 1); // Újév - Wednesday
 $carbon->isBankHoliday(); // boolean (true)
 
 $carbon = Carbon::create(2020, 1, 2);
 $carbon->isBankHoliday(); // boolean (false)
 
-$carbon = Carbon::create(2018, 03, 17); // St Patrick's Day
+$carbon = Carbon::create(2020, 03, 15); // Az 1848-as forradalom ünnepe
 $carbon->isBankHoliday(); // boolean (false)
 
-$carbon = Carbon::create(2018, 12, 25); // Christmas - Tuesday
+$carbon = Carbon::create(2018, 12, 25); // Karácsony - Tuesday
 $carbon->isBankHoliday(); // boolean (true)
 
-$carbon = Carbon::create(2016, 12, 25); // Christmas - Sunday
+$carbon = Carbon::create(2016, 12, 25); // Karácsony - Sunday
 $carbon->isBankHoliday(); // boolean (false)
 
-$carbon = Carbon::create(2016, 12, 26); // Monday
+$carbon = Carbon::create(2016, 12, 26); // Karácsony Másnap - Monday
 $carbon->isBankHoliday(); // boolean (true)
 
-$carbon = Carbon::create(2021, 12, 25); // Christmas - Saturday
+$carbon = Carbon::create(2021, 12, 25); // Karácsony - Saturday
 $carbon->isBankHoliday(); // boolean (false)
 
-$carbon = Carbon::create(2021, 12, 24); // Friday
+$carbon = Carbon::create(2021, 12, 24); // Szenteste - Friday
 $carbon->isBankHoliday(); // boolean (false)
 ```
 
@@ -296,7 +308,7 @@ Get name if date is holiday. Returns `string` or `false`
 
 ```php
 $carbon = Carbon::create(2018, 12, 31);
-$carbon->getHolidayName(); // New Year's Eve
+$carbon->getHolidayName(); // Szilveszter
 ```
 
 ### Add Own Holiday
@@ -306,15 +318,15 @@ See [documentation](https://castorland.github.io/hu-holidays/#addHoliday) for mo
 ```php
 $carbon = new Carbon();
 $carbon->addHoliday([
-    'name' => "Spongebob's Birthday",
-    'date' => Carbon::create(1986, 7, 14),
+    'name' => "A kockásfülű nyúl kezdete",
+    'date' => Carbon::create(1977, 8, 26),
     'bank_holiday' => false
 ]);
 
 $carbon->addHoliday([
-    'name' => "Q1 Tax Payments",
+    'name' => "SZJA Bevallás",
     'date' => function() use($carbon) {
-        $q1 = Carbon::create($carbon->year, 4, 15, 0, 0, 0);
+        $q1 = Carbon::create($carbon->year, 5, 22, 0, 0, 0);
         if($q1->isBankHoliday()) {
             $q1->addDay();
 
@@ -328,7 +340,7 @@ $carbon->addHoliday([
         }
 
         if($q1 < $carbon) {
-            $q1 = Carbon::create($carbon->year + 1, 4, 15, 0, 0, 0);
+            $q1 = Carbon::create($carbon->year + 1, 5, 22, 0, 0, 0);
 
             if($q1->isBankHoliday()) {
                 $q1->addDay();
@@ -357,10 +369,10 @@ $carbon->addHoliday([
 
 ```php
 $carbon = Carbon::create(2016, 12, 25); // Sunday
-$carbon->getHolidayName(); // Christmas Day
+$carbon->getHolidayName(); // Karácsony
 
 $carbon = Carbon::create(2016, 12, 26); // Monday
-$carbon->getHolidayName(); // Christmas Day (Observed), Kwanzaa
+$carbon->getHolidayName(); // Karácsony Másnap
 ```
 
 ### Contributing
