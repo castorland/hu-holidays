@@ -82,7 +82,7 @@
 			<li><a href="#getEnergiatakarekossagiVilagnapHoliday">getEnergiatakarekossagiVilagnapHoliday()</a></li>
 			<li><a href="#getEuropaiAutomentesNapHoliday">getEuropaiAutomentesNapHoliday()</a></li>
 			<li><a href="#getFoldunkertVilagnapHoliday">getFoldunkertVilagnapHoliday()</a></li>
-			<li><a href="#getGyerenapHoliday">getGyerenapHoliday()</a></li>
+			<li><a href="#getGyereknapHoliday">getGyereknapHoliday()</a></li>
 			<li><a href="#getHalottakNapjaHoliday">getHalottakNapjaHoliday()</a></li>
 			<li><a href="#getHamvazoszerdaHoliday">getHamvazoszerdaHoliday()</a></li>
 			<li><a href="#getHusvetHetfoHoliday">getHusvetHetfoHoliday()</a></li>
@@ -686,7 +686,7 @@ $holidays-&gt;getAFoldNapjaHoliday(2022);
 //    &quot;bank_holiday&quot;: false
 //    &quot;days_away&quot;: 865
 // }</code></pre>
-<h3 id="getAHoldNapjaHoliday"><a href="#getAHoldNapjaHoliday">getAHoldNapjaHoliday()</a></h3>
+			<h3 id="getAHoldNapjaHoliday"><a href="#getAHoldNapjaHoliday">getAHoldNapjaHoliday()</a></h3>
 			<p>Get A Hold napja for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get A Hold napja in a given year.</p>
 			<pre><code class="language-php">getAHoldNapjaHoliday(int $year=null) : object</code></pre>
 			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
@@ -712,7 +712,7 @@ $holidays-&gt;getAHoldNapjaHoliday(2022);
 //    &quot;bank_holiday&quot;: false
 //    &quot;days_away&quot;: 931
 // }</code></pre>
-<h3 id="getAHolokausztNemzetkoziEmleknapjaHoliday"><a href="#getAHolokausztNemzetkoziEmleknapjaHoliday">getAHolokausztNemzetkoziEmleknapjaHoliday()</a></h3>
+			<h3 id="getAHolokausztNemzetkoziEmleknapjaHoliday"><a href="#getAHolokausztNemzetkoziEmleknapjaHoliday">getAHolokausztNemzetkoziEmleknapjaHoliday()</a></h3>
 			<p>Get A holokauszt nemzetközi emléknapja for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get A holokauszt nemzetközi emléknapja in a given year.</p>
 			<pre><code class="language-php">getAHolokausztNemzetkoziEmleknapjaHoliday(int $year=null) : object</code></pre>
 			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
@@ -738,13 +738,11 @@ $holidays-&gt;getAHolokausztNemzetkoziEmleknapjaHoliday(2022);
 //    &quot;bank_holiday&quot;: false
 //    &quot;days_away&quot;: 757
 // }</code></pre>
-<h3 id="AKinaiUjevKezdeteHoliday"><a href="#getAKinaiUjevKezdeteHoliday">getAKinaiUjevKezdeteHoliday()</a></h3>
-<p>The <code>AKinaiUjevKezdete</code> trait provides methods to calculate the start date of the A kínai újév kezdete for a given year.</p>
-<hr>
-<h4 id="getAKinaiUjevKezdeteHoliday"><a href="#getAKinaiUjevKezdeteHoliday">getAKinaiUjevKezdeteHoliday()</a></h4>
-<p>Get the start date of the A kínai újév kezdete for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the start date in a specific year.</p>
-<pre><code class="language-php">getAKinaiUjevKezdeteHoliday(int $year = null) : object</code></pre>
-<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+			<h3 id="getAKinaiUjevKezdeteHoliday"><a href="#getAKinaiUjevKezdeteHoliday">getAKinaiUjevKezdeteHoliday()</a></h3>
+			<p>The <code>AKinaiUjevKezdete</code> trait provides methods to calculate the start date of the A kínai újév kezdete for a given year.</p>
+			<p>Get the start date of the A kínai újév kezdete for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the start date in a specific year.</p>
+			<pre><code class="language-php">getAKinaiUjevKezdeteHoliday(int $year = null) : object</code></pre>
+			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
 $holidays->getAKinaiUjevKezdeteHoliday();
 
 // {
@@ -767,15 +765,416 @@ $holidays->getAKinaiUjevKezdete(2022);
 //    "bank_holiday": false,
 //    "days_away": 742
 // }</code></pre>
-
-
-
-
-
-			<h3 id="getBlackFridayHoliday"><a href="#getBlackFridayHoliday">getBlackFridayHoliday()</a></h3>
-			<p>Get Black Friday for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Black Friday in a given year.</p>
-			<pre><code class="language-php">getBlackFridayHoliday(int $year=null) : object</code></pre>
+			<h3 id="getAMagyarKolteszetNapjaHoliday"><a href="#getAMagyarKolteszetNapjaHoliday">getAMagyarKolteszetNapjaHoliday()</a></h3>
+			<p>The <code>AMagyarKolteszetNapja</code> trait provides methods to calculate the date for A magyar költészet napja for a given year.</p>
+			<p>Get the date of the A magyar költészet napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+			<pre><code class="language-php">getAMagyarKolteszetNapjaHoliday(int $year = null) : object</code></pre>
 			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMagyarKolteszetNapjaHoliday();
+
+// {
+//    "name": "A magyar költészet napja",
+//    "date": "2020-04-11 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 101
+// }</code></pre>
+
+
+$holidays->name // A magyar költészet napja
+$holidays->date->format('m-d-Y') // 04-11-2020
+$holidays->days_away // 101
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMagyarKolteszetNapjaHoliday(2022);
+
+// {
+//    "name": "A magyar költészet napja",
+//    "date": "2022-04-11 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 831
+// }</code></pre>
+			<h3 id="getAMagyarKulturaNapjaHoliday"><a href="#getAMagyarKulturaNapjaHoliday">getAMagyarKulturaNapjaHoliday()</a></h3>
+			<p>The <code>AMagyarKulturatNapja</code> trait provides methods to calculate the date for A magyar kultúra napja for a given year.</p>
+			<p>Get the date of the A magyar kultúra napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+			<pre><code class="language-php">getAMagyarKulturaNapjaHoliday(int $year = null) : object</code></pre>
+			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMagyarKulturaNapjaHoliday();
+
+// {
+//    "name": "A magyar kultúra napja",
+//    "date": "2020-01-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 21
+// }</code></pre>
+
+
+$holidays->name // A magyar kultúra napja
+$holidays->date->format('m-d-Y') // 01-22-2020
+$holidays->days_away // 21
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMagyarKulturaNapjaHoliday(2022);
+
+// {
+//    "name": "A magyar kultúra napja",
+//    "date": "2022-01-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 751
+// }</code></pre>
+
+		<h3 id="getAMehekNapjaHoliday"><a href="#getAMehekNapjaHoliday">getAMehekNapjaHoliday()</a></h3>
+		<p>The <code>AMehekNapja</code> trait provides methods to calculate the date for A méhek napja for a given year.</p>
+		<p>Get the date of the A méhek napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+		<pre><code class="language-php">getAMehekNapjaHoliday(int $year = null) : object</code></pre>
+		<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMehekNapjaHoliday();
+
+// {
+//    "name": "A méhek napja",
+//    "date": "2020-04-30 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 119
+// }</code></pre>
+$holidays->name // A méhek napja
+$holidays->date->format('m-d-Y') // 04-30-2020
+$holidays->days_away // 119
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMehekNapjaHoliday(2022);
+
+// {
+//    "name": "A méhek napja",
+//    "date": "2022-04-30 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 849
+// }</code></pre>
+
+	<h3 id="getAMeteorologiaiTavaszKezdeteHoliday"><a href="#getAMeteorologiaiTavaszKezdeteHoliday">getAMeteorologiaiTavaszKezdeteHoliday()</a></h3>
+	<p>The <code>AMeteorologiaiTavaszKezdete</code> trait provides methods to calculate the date for A meteorológiai tavasz kezdete for a given year.</p>
+	<p>Get the date of the A meteorológiai tavasz kezdete for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+	<pre><code class="language-php">getAMeteorologiaiTavaszKezdeteHoliday(int $year = null) : object</code></pre>
+	<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMeteorologiaiTavaszKezdeteHoliday();
+
+// {
+//    "name": "A meteorológiai tavasz kezdete",
+//    "date": "2020-03-01 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 60
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMeteorologiaiTavaszKezdeteHoliday(2022);
+
+// {
+//    "name": "A meteorológiai tavasz kezdete",
+//    "date": "2022-04-30 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 849
+// }</code></pre>
+
+	<h3 id="getAMunkaUnnepeHoliday"><a href="#getAMunkaUnnepeHoliday">getAMunkaUnnepeHoliday()</a></h3>
+	<p>The <code>AMunkaUnnepe</code> trait provides methods to calculate the date for A munka ünnepe for a given year.</p>
+	<p>Get the date of the A munka ünnepe for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+	<pre><code class="language-php">getAMunkaUnnepeHoliday(int $year = null) : object</code></pre>
+	<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$carbon->getAMunkaUnnepeHoliday();
+
+// {
+//    "name": "A munka ünnepe",
+//    "date": "2020-05-01 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 121
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAMunkaUnnepeHoliday(2022);
+
+// {
+//    "name": "A munka ünnepe",
+//    "date": "2022-05-01 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 851
+// }</code></pre>
+
+	<h3 id="getANapNapjaHoliday"><a href="#getANapNapjaHoliday">getANapNapjaHoliday()</a></h3>
+	<p>The <code>ANapNapja</code> trait provides methods to calculate the date for A Nap napja for a given year.</p>
+	<p>Get the date of the A Nap napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+	<pre><code class="language-php">getANapNapjaHoliday(int $year = null) : object</code></pre>
+	<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getANapNapjaHoliday();
+
+// {
+//    "name": "A Nap napja",
+//    "date": "2020-05-03 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 123
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getANapNapjaHoliday(2022);
+
+// {
+//    "name": "A Nap napja",
+//    "date": "2022-05-03 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 853
+// }</code></pre>
+
+	<h3 id="getANobelDijAlapitasanakNapjaHoliday"><a href="#getANobelDijAlapitasanakNapjaHoliday">getANobelDijAlapitasanakNapjaHoliday()</a></h3>
+	<p>The <code>ANobelDijAlapitasanakNapja</code> trait provides methods to calculate the date for A Nobel-díj alapításának napja for a given year.</p>
+	<p>Get the date of the A Nobel-díj alapításának napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+	<pre><code class="language-php">getANobelDijAlapitasanakNapjaHoliday(int $year = null) : object</code></pre>
+	<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getANobelDijAlapitasanakNapjaHoliday();
+
+// {
+//    "name": "A Nobel-díj alapításának napja",
+//    "date": "2020-11-27 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 331
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getANobelDijAlapitasanakNapjaHoliday(2022);
+
+// {
+//    "name": "A Nobel-díj alapításának napja",
+//    "date": "2022-11-27 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 1061
+// }</code></pre>
+
+	<h3 id="getAnyakNapjaHoliday"><a href="#getAnyakNapjaHoliday">getAnyakNapjaHoliday()</a></h3>
+	<p>The <code>AnyakNapja</code> trait provides methods to calculate the date for Anyák napja for a given year.</p>
+	<p>Get the date of the Anyák napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+	<pre><code class="language-php">getAnyakNapjaHoliday(int $year = null) : object</code></pre>
+	<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAnyakNapjaHoliday();
+
+// {
+//    "name": "Anyák napja",
+//    "date": "2020-05-03 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 123
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAnyakNapjaHoliday(2022);
+
+// {
+//    "name": "A Nobel-díj alapításának napja",
+//    "date": "2022-05-03 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 853
+// }</code></pre>
+
+<h3 id="getApakNapjaHoliday"><a href="#getApakNapjaHoliday">getApakNapjaHoliday()</a></h3>
+<p>The <code>ApakNapja</code> trait provides methods to calculate the date for Apák napja for a given year.</p>
+<p>Get the date of the Apák napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getApakNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getApakNapjaHoliday();
+
+// {
+//    "name": "Apák napja",
+//    "date": "2020-06-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 172
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getApakNapjaHoliday(2022);
+
+// {
+//    "name": "Apák napja",
+//    "date": "2022-06-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 902
+// }</code></pre>
+
+<h3 id="getAVallasokVilagnapjaHoliday"><a href="#getAVallasokVilagnapjaHoliday">getAVallasokVilagnapjaHoliday()</a></h3>
+<p>The <code>AVallasokVilagnapja</code> trait provides methods to calculate the date for A vallások világnapja for a given year.</p>
+<p>Get the date of the A vallások világnapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAVallasokVilagnapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVallasokVilagnapjaHoliday();
+
+// {
+//    "name": "A vallások világnapja",
+//    "date": "2020-01-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 20
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVallasokVilagnapjaHoliday(2022);
+
+// {
+//    "name": "A vallások világnapja",
+//    "date": "2022-01-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 750
+// }</code></pre>
+
+<h3 id="getAVilagirodalomNapjaHoliday"><a href="#getAVilagirodalomNapjaHoliday">getAVilagirodalomNapjaHoliday()</a></h3>
+<p>The <code>AVilagirodalomNapja</code> trait provides methods to calculate the date for A világirodalom napja for a given year.</p>
+<p>Get the date of the A világirodalom napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAVilagirodalomNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVilagirodalomNapjaHoliday();
+
+// {
+//    "name": "A világirodalom napja",
+//    "date": "2020-01-08 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 7
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVilagirodalomNapjaHoliday(2022);
+
+// {
+//    "name": "A világirodalom napja",
+//    "date": "2022-01-08 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 737
+// }</code></pre>
+
+<h3 id="getAVizVilagnapjaHoliday"><a href="#getAVizVilagnapjaHoliday">getAVizVilagnapjaHoliday()</a></h3>
+<p>The <code>AVizVilagnapja</code> trait provides methods to calculate the date for A víz világnapja for a given year.</p>
+<p>Get the date of the A víz világnapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAVizVilagnapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVizVilagnapjaHoliday();
+
+// {
+//    "name": "A víz világnapja",
+//    "date": "2020-03-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 81
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAVizVilagnapjaHoliday(2022);
+
+// {
+//    "name": "A víz világnapja",
+//    "date": "2022-03-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 811
+// }</code></pre>
+
+<h3 id="getAz1848asForradalomUnnepeHoliday"><a href="#getAz1848asForradalomUnnepeHoliday">getAz1848asForradalomUnnepeHoliday()</a></h3>
+<p>The <code>Az1848asForradalomUnnepe</code> trait provides methods to calculate the date for Az 1848-as forradalom ünnepe for a given year.</p>
+<p>Get the date of the Az 1848-as forradalom ünnepe for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAz1848asForradalomUnnepeHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAz1848asForradalomUnnepeHoliday();
+
+// {
+//    "name": "Az 1848-as forradalom ünnepe",
+//    "date": "2020-03-15 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 74
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAz1848asForradalomUnnepeHoliday(2022);
+
+// {
+//    "name": "Az 1848-as forradalom ünnepe",
+//    "date": "2022-03-15 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 804
+// }</code></pre>
+
+<h3 id="getAz1956osForradalomUnnepeHoliday"><a href="#getAz1956osForradalomUnnepeHoliday">getAz1956osForradalomUnnepeHoliday()</a></h3>
+<p>The <code>Az1956osForradalomUnnepe</code> trait provides methods to calculate the date for Az 1956-os forradalom ünnepe for a given year.</p>
+<p>Get the date of the Az 1956-os forradalom ünnepe for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAz1956osForradalomUnnepeHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAz1956osForradalomUnnepeHoliday();
+
+// {
+//    "name": "Az 1956-os forradalom ünnepe",
+//    "date": "2020-10-23 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 296
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAz1956osForradalomUnnepeHoliday(2022);
+
+// {
+//    "name": "Az 1956-os forradalom ünnepe",
+//    "date": "2022-10-23 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 926
+// }</code></pre>
+
+<h3 id="getAzAllamalapitasUnnepeHoliday"><a href="#getAzAllamalapitasUnnepeHoliday">getAzAllamalapitasUnnepeHoliday()</a></h3>
+<p>The <code>AzAllamalapitasUnnepe</code> trait provides methods to calculate the date for Az államalapítás ünnepe for a given year.</p>
+<p>Get the date of the Az államalapítás ünnepe for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAzAllamalapitasUnnepeHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAzAllamalapitasUnnepeHoliday();
+
+// {
+//    "name": "Az államalapítás ünnepe",
+//    "date": "2020-08-20 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 232
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAzAllamalapitasUnnepeHoliday(2022);
+
+// {
+//    "name": "Az államalapítás ünnepe",
+//    "date": "2022-08-20 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 862
+// }</code></pre>
+
+<h3 id="getAzAradiVertanukEmleknapjaHoliday"><a href="#getAzAradiVertanukEmleknapjaHoliday">getAzAradiVertanukEmleknapjaHoliday()</a></h3>
+<p>The <code>AzAradiVertanukEmleknapja</code> trait provides methods to calculate the date for Az aradi vértanúk emléknapja for a given year.</p>
+<p>Get the date of the Az aradi vértanúk emléknapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getAzAradiVertanukEmleknapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getAzAradiVertanukEmleknapjaHoliday();
+
+// {
+//    "name": "Az aradi vértanúk emléknapja",
+//    "date": "2020-10-06 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 279
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->AzAradiVertanukEmleknapjaHoliday(2022);
+
+// {
+//    "name": "Az aradi vértanúk emléknapja",
+//    "date": "2022-10-06 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 909
+// }</code></pre>
+
+<h3 id="getAzEgeszsegVilagnapjaHoliday"><a href="#getAzEgeszsegVilagnapjaHoliday">getAzEgeszsegVilagnapjaHoliday()</a></h3>
+<p>The <code>AzEgeszsegVilagnapja</code> trait provides methods to calculate the date for Az egészség világnapja for a given year.</p>
+<p>Get the date of the Az egészség világnapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">AzEgeszsegVilagnapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->AzEgeszsegVilagnapjaHoliday();
+
+// {
+//    "name": "Az egészség világnapja",
+//    "date": "2020-04-07 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 97
+// }</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->AzEgeszsegVilagnapjaHoliday(2022);
+
+// {
+//    "name": "Az egészség világnapja",
+//    "date": "2022-04-07 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 827
+// }</code></pre>
+
+<h3 id="getBlackFridayHoliday"><a href="#getBlackFridayHoliday">getBlackFridayHoliday()</a></h3>
+<p>Get Black Friday for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Black Friday in a given year.</p>
+<pre><code class="language-php">getBlackFridayHoliday(int $year=null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
 $holidays-&gt;getBlackFridayHoliday();
 
 // {
@@ -798,9 +1197,36 @@ $holidays-&gt;getBlackFridayHoliday(2022);
 //    &quot;bank_holiday&quot;: false
 //    &quot;days_away&quot;: 1059
 // }</code></pre>
+
+<h3 id="getBolondokNapjaHoliday"><a href="#getBolondokNapjaHoliday">getBolondokNapjaHoliday()</a></h3>
+<p>The <code>BolondokNapja</code> trait provides methods to calculate the date for Bolondok napja for a given year. Optionally pass in a $year to get Cyber Monday in a given year.</p>
+<pre><code class="language-php">getBolondokNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getBolondokNapjaHoliday();
+
+// {
+//    "name": "Bolondok napja",
+//    "date": "2020-04-01 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 92
+// }
+
+$holidays->name // Bolondok napja
+$holidays->date->format('m-d-Y') // 04-01-2020
+$holidays->days_away // 92
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getBolondokNapjaHoliday(2022);
+
+// {
+//    "name": "Bolondok napja",
+//    "date": "2022-04-01 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 822
+// }</code></pre>
+
 <h3 id="getCyberMondayHoliday"><a href="#getCyberMondayHoliday">getCyberMondayHoliday()</a></h3>
-<p>Get Cyber Monday for the current year of the Carbon object. Optionally pass in a $year to get Cyber Monday in a given year.</p>
-<pre><code class="language-php">getCyberMondayHoliday(int $year=null) : object</code></pre>
+<p>Get <code>Cyber Monday</code> for the current year of the Carbon object. Optionally pass in a $year to get Cyber Monday in a given year.</p>
 <pre><code class="language-php">getCyberMondayHoliday(int $year=null) : object</code></pre>
 <pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
 $holidays-&gt;getCyberMondayHoliday();
@@ -826,539 +1252,740 @@ $holidays-&gt;getCyberMondayHoliday(2022);
 //    &quot;days_away&quot;: 1062
 // }</code></pre>
 
-
-
-
-
-			<h3 id="getKarácsonyDayHoliday"><a href="#getKarácsonyDayHoliday">getKarácsonyDayHoliday()</a></h3>
-			<p>Get Karácsony Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Karácsony Day in a given year.</p>
-			<pre><code class="language-php">getKarácsonyDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKarácsonyDayHoliday();
+<h3 id="getEnergiatakarekossagiVilagnapHoliday"><a href="#getEnergiatakarekossagiVilagnapHoliday">getEnergiatakarekossagiVilagnapHoliday()</a></h3>
+<p>The <code>EnergiatakarekossagiVilagnap</code> trait provides methods to calculate the date for Energiatakarékossági világnap for a given year.</p>
+<p>Get the date of the Energiatakarékossági világnap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getEnergiatakarekossagiVilagnapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getEnergiatakarekossagiVilagnapHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Karácsony Day&quot;,
+//    "name": "Energiatakarékossági világnap",
+//    "date": "2020-03-29 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 88
+// }
+
+$holidays->name // Energiatakarékossági világnap
+$holidays->date->format('m-d-Y') // 03-29-2020
+$holidays->days_away // 88
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getEnergiatakarekossagiVilagnapHoliday(2022);
+
+// {
+//    "name": "Energiatakarékossági világnap",
+//    "date": "2022-03-29 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 818
+// }</code></pre>
+
+<h3 id="getEuropaiAutomentesNapHoliday"><a href="#getEuropaiAutomentesNapHoliday">getEuropaiAutomentesNapHoliday()</a></h3>
+<p>The <code>EuropaiAutomentesNap</code> trait provides methods to calculate the date for Európai autómentes nap for a given year.</p>
+<p>Get the date of the Európai autómentes nap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getEuropaiAutomentesNapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getEuropaiAutomentesNapHoliday();
+
+// {
+//    "name": "Európai autómentes nap",
+//    "date": "2020-09-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 265
+// }
+
+$holidays->name // Európai autómentes nap
+$holidays->date->format('m-d-Y') // 09-22-2020
+$holidays->days_away // 265
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getEuropaiAutomentesNapHoliday(2022);
+
+// {
+//    "name": "Európai autómentes nap",
+//    "date": "2022-09-22 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 895
+// }</code></pre>
+
+<h3 id="getFoldunkertVilagnapHoliday"><a href="#getFoldunkertVilagnapHoliday">getFoldunkertVilagnapHoliday()</a></h3>
+<p>The <code>FoldunkertVilagnap</code> trait provides methods to calculate the date for Földünkért világnap for a given year.</p>
+<p>Get the date of the Földünkért világnap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getFoldunkertVilagnapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getFoldunkertVilagnapHoliday();
+
+// {
+//    "name": "Földünkért világnap",
+//    "date": "2020-10-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 284
+// }
+
+$holidays->name // Földünkért világnap
+$holidays->date->format('m-d-Y') // 10-21-2020
+$holidays->days_away // 284
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getFoldunkertVilagnapHoliday(2022);
+
+// {
+//    "name": "Földünkért világnap",
+//    "date": "2022-10-21 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 914
+// }</code></pre>
+
+<h3 id="getGyereknapHoliday"><a href="#getGyereknapHoliday">getGyereknapHoliday()</a></h3>
+<p>The <code>Gyereknap</code> trait provides methods to calculate the date for Gyereknap for a given year.</p>
+<p>Get the date of the Gyereknap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getGyereknapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getGyereknapHoliday();
+
+// {
+//    "name": "Gyereknap",
+//    "date": "2020-05-31 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 151
+// }
+
+$holidays->name // Gyereknap
+$holidays->date->format('m-d-Y') // 05-31-2020
+$holidays->days_away // 151
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getGyerenapHoliday(2022);
+
+// {
+//    "name": "Gyereknap",
+//    "date": "2022-05-31 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 781
+// }</code></pre>
+
+<h3 id="getHalottakNapjaHoliday"><a href="#getHalottakNapjaHoliday">getHalottakNapjaHoliday()</a></h3>
+<p>The <code>HalottakNapja</code> trait provides methods to calculate the date for Halottak napja for a given year.</p>
+<p>Get the date of the Halottak napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getHalottakNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHalottakNapjaHoliday();
+
+// {
+//    "name": "Halottak napja",
+//    "date": "2020-11-02 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 307
+// }
+
+$holidays->name // Halottak napja
+$holidays->date->format('m-d-Y') // 11-02-2020
+$holidays->days_away // 307
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHalottakNapjaHoliday(2022);
+
+// {
+//    "name": "Halottak napja",
+//    "date": "2022-11-02 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 937
+// }</code></pre>
+
+<h3 id="getHamvazoszerdaHoliday"><a href="#getHamvazoszerdaHoliday">getHamvazószerdaHoliday()</a></h3>
+<p>The <code>Hamvazoszerda</code> trait provides methods to calculate the date for Hamvazószerda for a given year.</p>
+<p>Get the date of the Hamvazószerda for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getHamvazoszerdaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHamvazoszerdaHoliday();
+
+// {
+//    "name": "Hamvazószerda",
+//    "date": "2020-02-26 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 56
+// }
+
+$holidays->name // Hamvazószerda
+$holidays->date->format('m-d-Y') // 02-26-2020
+$holidays->days_away // 56
+$holidays->bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHamvazoszerdaHoliday(2022);
+
+// {
+//    "name": "Hamvazószerda",
+//    "date": "2022-02-16 00:00:00",
+//    "bank_holiday": false,
+//    "days_away": 746
+// }</code></pre>
+
+<h3 id="getHusvetHetfoHoliday"><a href="#getHusvetHetfoHoliday">getHusvetHetfoHoliday()</a></h3>
+<p>The <code>HusvetHetfo</code> trait provides methods to calculate the date for Húsvét hétfő for a given year.</p>
+<p>Get the date of the Húsvét hétfő for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getHusvetHetfoHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHusvetHetfoHoliday();
+
+// {
+//    "name": "Húsvét hétfő",
+//    "date": "2020-04-13 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 103
+// }
+
+$holidays->name // Húsvét hétfő
+$holidays->date->format('m-d-Y') // 04-13-2020
+$holidays->days_away // 103
+$holidays->bank_holiday // true</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays->getHusvetHetfoHoliday(2022);
+
+// {
+//    "name": "Húsvét hétfő",
+//    "date": "2022-04-18 00:00:00",
+//    "bank_holiday": true,
+//    "days_away": 833
+// }</code></pre>
+
+<h3 id="getKaracsonyHoliday"><a href="#getKaracsonyHoliday">getKaracsonyHoliday()</a></h3>
+<p>The <code>Karacsony</code> trait provides methods to calculate the date for Karácsony for a given year.</p>
+<p>Get the date of the Karácsony for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getKaracsonyHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKaracsonyHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Karácsony&quot;,
 //    &quot;date&quot;: &quot;2020-12-25 00:00:00&quot;,
 //    &quot;bank_holiday&quot;: true,
 //    &quot;days_away&quot;: 359
 // }
 
-$holidays-&gt;name // Karácsony Day
+$holidays-&gt;name // Karácsony
 $holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-25-2020
 $holidays-&gt;days_away // 359
 $holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKarácsonyDayHoliday(2022);
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKaracsonyHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Karácsony Day&quot;,
+//    &quot;name&quot;: &quot;Karácsony&quot;,
 //    &quot;date&quot;: &quot;2022-12-25 00:00:00&quot;,
 //    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 1089
+//    &quot;days_away&quot;: 989
 // }</code></pre>
-			<h3 id="getKarácsonyEveHoliday"><a href="#getKarácsonyEveHoliday">getKarácsonyEveHoliday()</a></h3>
-			<p>Get Karácsony Eve for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Karácsony Eve in a given year.</p>
-			<pre><code class="language-php">getKarácsonyEveHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKarácsonyEveHoliday();
+
+<h3 id="getKaracsonyMasnapHoliday"><a href="#getKaracsonyMasnapHoliday">getKaracsonyMasnapHoliday()</a></h3>
+<p>The <code>KaracsonyMasnap</code> trait provides methods to calculate the date for Karácsony másnapja for a given year.</p>
+<p>Get the date of the Karácsony másnapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getKaracsonyMasnapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKaracsonyMasnapHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Karácsony Eve&quot;,
-//    &quot;date&quot;: &quot;2020-12-24 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 358
+//    &quot;name&quot;: &quot;Karácsony másnapja&quot;,
+//    &quot;date&quot;: &quot;2020-12-26 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 360
 // }
 
-$holidays-&gt;name // Karácsony Eve
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-24-2020
-$holidays-&gt;days_away // 358
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKarácsonyEveHoliday(2022);
+$holidays-&gt;name // Karácsony másnapja
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-26-2020
+$holidays-&gt;days_away // 360
+$holidays-&gt;bank_holiday // true</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKaracsonyMasnapHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Karácsony Eve&quot;,
-//    &quot;date&quot;: &quot;2022-12-24 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1088
+//    &quot;name&quot;: &quot;Karácsony másnapja&quot;,
+//    &quot;date&quot;: &quot;2022-12-26 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 990
 // }</code></pre>
 
-
-
-
-			<h3 id="getHalottakNapjaHoliday"><a href="#getHalottakNapjaHoliday">getHalottakNapjaHoliday()</a></h3>
-			<p>Get Halottak napja for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Halottak napja in a given year.</p>
-			<pre><code class="language-php">getHalottakNapjaHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHalottakNapjaHoliday();
+<h3 id="getKihivasNapjaHoliday"><a href="#getKihivasNapjaHoliday">getKihivasNapjaHoliday()</a></h3>
+<p>The <code>KihivasNapja</code> trait provides methods to calculate the date for Kihívás Napja for a given year.</p>
+<p>Get the date of the Kihívás Napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getKihivasNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKihivasNapjaHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Halottak napja&quot;,
-//    &quot;date&quot;: &quot;2020-11-01 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 305
+//    &quot;name&quot;: &quot;Kihívás Napja&quot;,
+//    &quot;date&quot;: &quot;2020-05-22 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 141
 // }
 
-$holidays-&gt;name // Halottak napja
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 11-01-2020
-$holidays-&gt;days_away // 305
+$holidays-&gt;name // Kihívás Napja
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 05-22-2020
+$holidays-&gt;days_away // 141
 $holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHalottakNapjaHoliday(2022);
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKihivasNapjaHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Halottak napja&quot;,
-//    &quot;date&quot;: &quot;2022-11-06 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1040
+//    &quot;name&quot;: &quot;Kihívás Napja&quot;,
+//    &quot;date&quot;: &quot;2022-05-22 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 772
 // }</code></pre>
 
-
-			<h3 id="getEasterHoliday"><a href="#getEasterHoliday">getEasterHoliday()</a></h3>
-			<p>Get Easter for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Easter in a given year.</p>
-			<pre><code class="language-php">getEasterHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getEasterHoliday();
+<h3 id="getKornyezetvedelmiVilagnapHoliday"><a href="#getKornyezetvedelmiVilagnapHoliday">getKornyezetvedelmiVilagnapHoliday()</a></h3>
+<p>The <code>KornyezetvedelmiVilagnap</code> trait provides methods to calculate the date for Környezetvédelmi világnap for a given year.</p>
+<p>Get the date of the Környezetvédelmi világnap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getKornyezetvedelmiVilagnapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKornyezetvedelmiVilagnapHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Easter&quot;,
-//    &quot;date&quot;: &quot;2020-04-12 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 102
+//    &quot;name&quot;: &quot;Környezetvédelmi világnap&quot;,
+//	  &quot;date&quot;: &quot;2020-06-05 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 175
 // }
 
-$holidays-&gt;name // Easter
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-12-2020
-$holidays-&gt;days_away // 102
+$holidays-&gt;name // Környezetvédelmi világnap
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-05-2020
+$holidays-&gt;days_away // 175
 $holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getEasterHoliday(2022);
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getKornyezetvedelmiVilagnapHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Easter&quot;,
-//    &quot;date&quot;: &quot;2022-04-17 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 837
+//    &quot;name&quot;: &quot;Környezetvédelmi világnap&quot;,
+//	  &quot;date&quot;: &quot;2022-06-05 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 805
 // }</code></pre>
 
-
-
-			<h3 id="getFathersDayHoliday"><a href="#getFathersDayHoliday">getFathersDayHoliday()</a></h3>
-			<p>Get Father's Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Father's Day in a given year.</p>
-			<pre><code class="language-php">getFathersDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getFathersDayHoliday();
+<h3 id="getMadarakEsFakNapjaHoliday"><a href="#getMadarakEsFakNapjaHoliday">getMadarakEsFakNapjaHoliday()</a></h3>
+<p>The <code>MadarakEsFakNapja</code> trait provides methods to calculate the date for Madarak és Fák Napja for a given year.</p>
+<p>Get the date of the Madarak és Fák Napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getMadarakEsFakNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getMadarakEsFakNapjaHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Father&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2020-06-21 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 172
+//    &quot;name&quot;: &quot;Madarak és Fák Napja&quot;,
+//    &quot;date&quot;: &quot;2020-05-10 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 119
 // }
 
-$holidays-&gt;name // Father&#039;s Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-21-2020
-$holidays-&gt;days_away // 172
+$holidays-&gt;name // Madarak és Fák Napja
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 05-10-2020
+$holidays-&gt;days_away // 119
 $holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getFathersDayHoliday(2022);
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getMadarakEsFakNapjaHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Father&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2022-06-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 900
+//    &quot;name&quot;: &quot;Madarak és Fák Napja&quot;,
+//    &quot;date&quot;: &quot;2022-05-10 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 749
 // }</code></pre>
 
-
-
-			<h3 id="getFlagDayHoliday"><a href="#getFlagDayHoliday">getFlagDayHoliday()</a></h3>
-			<p>Get Medárd napja for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Medárd napja in a given year.</p>
-			<pre><code class="language-php">getFlagDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getFlagDayHoliday();
+<h3 id="getMedardNapjaHoliday"><a href="#getMedardNapjaHoliday">getMedardNapjaHoliday()</a></h3>
+<p>The <code>MedardNapja</code> trait provides methods to calculate the date for Medárd napja for a given year.</p>
+<p>Get the date of the Medárd napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getMedardNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getMedardNapjaHoliday();
 
 // {
 //    &quot;name&quot;: &quot;Medárd napja&quot;,
-//    &quot;date&quot;: &quot;2020-06-14 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 165
+//    &quot;date&quot;: &quot;2020-06-08 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 178
 // }
 
 $holidays-&gt;name // Medárd napja
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-14-2020
-$holidays-&gt;days_away // 165
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-08-2020
+$holidays-&gt;days_away // 178
 $holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getFlagDayHoliday(2022);
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getMedardNapjaHoliday(2022);
 
 // {
 //    &quot;name&quot;: &quot;Medárd napja&quot;,
-//    &quot;date&quot;: &quot;2022-06-14 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 895
+//    &quot;date&quot;: &quot;2022-06-08 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 808
 // }</code></pre>
 
-
-
-			<h3 id="getGoodFridayHoliday"><a href="#getGoodFridayHoliday">getGoodFridayHoliday()</a></h3>
-			<p>Get Good Friday for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Good Friday in a given year.</p>
-			<pre><code class="language-php">getGoodFridayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getGoodFridayHoliday();
+<h3 id="getMindenszentekHoliday"><a href="#getMindenszentekHoliday">getMindenszentekHoliday()</a></h3>
+<p>The <code>Mindenszentek</code> trait provides methods to calculate the date for Mindenszentek for a given year.</p>
+<p>Get the date of the Mindenszentek for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getMindenszentekHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holiday-&gt;getMindenszentekHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Good Friday&quot;,
+//    &quot;name&quot;: &quot;Mindenszentek&quot;,
+//	  &quot;date&quot;: &quot;2020-11-01 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 306
+// }
+
+$holidays-&gt;name // Mindenszentek
+$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 11-01-2020
+$holidays-&gt;days_away // 306
+$holidays-&gt;bank_holiday // true</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holiday-&gt;getMindenszentekHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Mindenszentek&quot;,
+//	  &quot;date&quot;: &quot;2022-11-01 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 936
+// }</code></pre>
+
+<h3 id="getNagyboldogasszonyNapjaHoliday"><a href="#getNagyboldogasszonyNapjaHoliday">getNagyboldogasszonyNapjaHoliday()</a></h3>
+<p>The <code>NagyboldogasszonyNapja</code> trait provides methods to calculate the date for Nagyboldogasszony napja for a given year.</p>
+<p>Get the date of the Nagyboldogasszony napja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getNagyboldogasszonyNapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNagyboldogasszonyNapjaHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Nagyboldogasszony napja&quot;,
+//    &quot;date&quot;: &quot;2020-08-15 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 227
+// }
+
+$holiday-&gt;name // Nagyboldogasszony napja
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 08-15-2020
+$holiday-&gt;days_away // 227
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNagyboldogasszonyNapjaHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Nagyboldogasszony napja&quot;,
+//    &quot;date&quot;: &quot;2022-08-15 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 957
+// }</code></pre>
+
+<h3 id="getNagypentekHoliday"><a href="#getNagypentekHoliday">getNagypentekHoliday()</a></h3>
+<p>The <code>Nagypentek</code> trait provides methods to calculate the date for Nagypéntek for a given year.</p>
+<p>Get the date of the Nagypéntek for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getNagypentekHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNagypentekHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Nagypéntek&quot;,
 //    &quot;date&quot;: &quot;2020-04-10 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
+//    &quot;bank_holiday&quot;: true,
 //    &quot;days_away&quot;: 100
 // }
 
-$holidays-&gt;name // Good Friday
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-10-2020
-$holidays-&gt;days_away // 100
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getGoodFridayHoliday(2022);
+$holiday-&gt;name // Nagypéntek
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-10-2020
+$holiday-&gt;days_away // 100
+$holiday-&gt;bank_holiday // true</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNagypentekHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Good Friday&quot;,
+//    &quot;name&quot;: &quot;Nagypéntek&quot;,
 //    &quot;date&quot;: &quot;2022-04-15 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 835
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 830
 // }</code></pre>
 
+<h3 id="getNemzetkoziFerfinapHoliday"><a href="#getNemzetkoziFerfinapHoliday">getNemzetkoziFerfinapHoliday()</a></h3>
+<p>The <code>NemzetkoziFerfinap</code> trait provides methods to calculate the date for Nemzetközi férfi nap for a given year.</p>
+<p>Get the date of the Nemzetközi férfi nap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getNemzetkoziFerfinapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNemzetkoziFerfinapHoliday();
 
+// {
+//    &quot;name&quot;: &quot;Nemzetközi férfi nap&quot;,
+//    &quot;date&quot;: &quot;2020-05-19 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 130
+// }
 
-			<h3 id="getGroundhogDayHoliday"><a href="#getGroundhogDayHoliday">getGroundhogDayHoliday()</a></h3>
-			<p>Get Rákellenes világnap for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Rákellenes világnap in a given year.</p>
-			<pre><code class="language-php">getGroundhogDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getGroundhogDayHoliday();
+$holiday-&gt;name // Nemzetközi férfi nap
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 05-19-2020
+$holiday-&gt;days_away // 130
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNemzetkoziFerfinapHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Nemzetközi férfi nap&quot;,
+//    &quot;date&quot;: &quot;2022-05-19 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 860
+// }</code></pre>
+
+<h3 id="getNemzetkoziPiNapHoliday"><a href="#getNemzetkoziPiNapHoliday">getNemzetkoziPiNapHoliday()</a></h3>
+<p>The <code>NemzetkoziPiNap</code> trait provides methods to calculate the date for Nemzetközi Pi nap for a given year.</p>
+<p>Get the date of the Nemzetközi Pi nap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getNemzetkoziPiNapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNemzetkoziPiNapHoliday();
+
+// {
+//	  &quot;name&quot;: &quot;Nemzetközi Pi nap&quot;,
+//    &quot;date&quot;: &quot;2020-03-14 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 73
+// }
+
+$holiday-&gt;name // Nemzetközi Pi nap
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 03-14-2020
+$holiday-&gt;days_away // 73
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNemzetkoziPiNapHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Nemzetközi Pi nap&quot;,
+//    &quot;date&quot;: &quot;2022-03-14 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 803
+// }</code></pre>
+
+<h3 id="getNonapHoliday"><a href="#getNonapHoliday">getNonapHoliday()</a></h3>
+<p>The <code>Nonap</code> trait provides methods to calculate the date for Nőnap for a given year.</p>
+<p>Get the date of the Nőnap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getNonapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNonapHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Nőnap&quot;,
+//    &quot;date&quot;: &quot;2020-03-08 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 67
+// }
+
+$holiday-&gt;name // Nőnap
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 03-08-2020
+$holiday-&gt;days_away // 67
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getNonapHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Nőnap&quot;,
+//    &quot;date&quot;: &quot;2022-03-08 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 797
+// }</code></pre>
+
+<h3 id="getOszirozsasForradalomHoliday"><a href="#getOszirozsasForradalomHoliday">getOszirozsasForradalomHoliday()</a></h3>
+<p>The <code>OszirozsasForradalom</code> trait provides methods to calculate the date for Őszi rózsás forradalom for a given year.</p>
+<p>Get the date of the Őszi rózsás forradalom for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getOszirozsasForradalomHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getOszirozsasForradalomHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Őszi rózsás forradalom&quot;,
+//    &quot;date&quot;: &quot;2020-10-31 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 305
+// }
+
+$holiday-&gt;name // Őszi rózsás forradalom
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 10-31-2020
+$holiday-&gt;days_away // 305
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getOszirozsasForradalomHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Őszi rózsás forradalom&quot;,
+//    &quot;date&quot;: &quot;2022-10-31 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 1035
+// }</code></pre>
+
+<h3 id="getPunkosdHetfoHoliday"><a href="#getPunkosdHetfoHoliday">getPunkosdHetfoHoliday()</a></h3>
+<p>The <code>PunkosdHetfo</code> trait provides methods to calculate the date for Pünkösd hétfő for a given year.</p>
+<p>Get the date of the Pünkösd hétfő for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getPunkosdHetfoHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getPunkosdHetfoHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Pünkösd hétfő&quot;,
+//    &quot;date&quot;: &quot;2020-06-01 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 152
+// }
+
+$holiday-&gt;name // Pünkösd hétfő
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-01-2020
+$holiday-&gt;days_away // 152
+$holiday-&gt;bank_holiday // true</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getPunkosdHetfoHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Pünkösd hétfő&quot;,
+//    &quot;date&quot;: &quot;2022-06-06 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: true,
+//    &quot;days_away&quot;: 887
+// }</code></pre>
+
+<h3 id="getRakellenesVilagnapHoliday"><a href="#getRakellenesVilagnapHoliday">getRakellenesVilagnapHoliday()</a></h3>
+<p>The <code>RakellenesVilagnap</code> trait provides methods to calculate the date for Rákellenes világnap for a given year.</p>
+<p>Get the date of the Rákellenes világnap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getRakellenesVilagnapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getRakellenesVilagnapHoliday();
 
 // {
 //    &quot;name&quot;: &quot;Rákellenes világnap&quot;,
 //    &quot;date&quot;: &quot;2020-02-04 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 32
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 34
 // }
 
-$holidays-&gt;name // Rákellenes világnap
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 02-02-2020
-$holidays-&gt;days_away // 32
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getGroundhogDayHoliday(2022);
+$holiday-&gt;name // Rákellenes világnap
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 02-04-2020
+$holiday-&gt;days_away // 34
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getRakellenesVilagnapHoliday(2022);
 
 // {
 //    &quot;name&quot;: &quot;Rákellenes világnap&quot;,
-//    &quot;date&quot;: &quot;2022-02-02 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 763
+//    &quot;date&quot;: &quot;2022-02-04 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 764
 // }</code></pre>
 
-
-
-			<h3 id="getHalloweenHoliday"><a href="#getHalloweenHoliday">getHalloweenHoliday()</a></h3>
-			<p>Get Halloween for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Halloween in a given year.</p>
-			<pre><code class="language-php">getHalloweenHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHalloweenHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Halloween&quot;,
-//    &quot;date&quot;: &quot;2020-10-31 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 304
-// }
-
-$holidays-&gt;name // Halloween
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 10-31-2020
-$holidays-&gt;days_away // 304
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHalloweenHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Halloween&quot;,
-//    &quot;date&quot;: &quot;2022-10-31 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1034
-// }</code></pre>
-
-
-
-			<h3 id="getHanukkahHoliday"><a href="#getHanukkahHoliday">getHanukkahHoliday()</a></h3>
-			<p>Get Hanukkah for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Hanukkah in a given year.</p>
-			<pre><code class="language-php">getHanukkahHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHanukkahHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Hanukkah&quot;,
-//    &quot;date&quot;: &quot;2020-12-11 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 345
-// }
-
-$holidays-&gt;name // Hanukkah
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-11-2020
-$holidays-&gt;days_away // 345
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getHanukkahHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Hanukkah&quot;,
-//    &quot;date&quot;: &quot;2022-12-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1083
-// }</code></pre>
-
-
-
-			<h3 id="getIndependenceDayHoliday"><a href="#getIndependenceDayHoliday">getIndependenceDayHoliday()</a></h3>
-			<p>Get Independence Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Independence Day in a given year.</p>
-			<pre><code class="language-php">getIndependenceDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getIndependenceDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Independence Day&quot;,
-//    &quot;date&quot;: &quot;2020-07-04 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 185
-// }
-
-$holidays-&gt;name // Independence Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 07-04-2020
-$holidays-&gt;days_away // 185
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getIndependenceDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Independence Day&quot;,
-//    &quot;date&quot;: &quot;2022-07-04 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 915
-// }</code></pre>
-
-
-
-			<h3 id="getIndigenousPeoplesDayHoliday"><a href="#getIndigenousPeoplesDayHoliday">getIndigenousPeoplesDayHoliday()</a></h3>
-			<p>Get Indigenous Peoples' Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Indigenous Peoples' Day in a given year.</p>
-			<pre><code class="language-php">getIndigenousPeoplesDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getIndigenousPeoplesDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Indigenous Peoples&#039; Day&quot;,
-//    &quot;date&quot;: &quot;2020-10-12 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 285
-// }
-
-$holidays-&gt;name // Indigenous Peoples&#039; Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 10-12-2020
-$holidays-&gt;days_away // 285
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getIndigenousPeoplesDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Indigenous Peoples&#039; Day&quot;,
-//    &quot;date&quot;: &quot;2022-10-10 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 1013
-// }</code></pre>
-
-
-
-			<h3 id="getJuneteenthHoliday"><a href="#getJuneteenthHoliday">getJuneteenthHoliday()</a></h3>
-			<p>Get Juneteenth for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Juneteenth in a given year.</p>
-			<pre><code class="language-php">getJuneteenthHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getJuneteenthHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Juneteenth&quot;,
-//    &quot;date&quot;: &quot;2020-06-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 170
-// }
-
-$holidays-&gt;name // Juneteenth
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 06-19-2020
-$holidays-&gt;days_away // 170
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getJuneteenthHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Juneteenth&quot;,
-//    &quot;date&quot;: &quot;2022-06-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 900
-// }</code></pre>
-
-
-
-
-			<h3 id="getKwanzaaHoliday"><a href="#getKwanzaaHoliday">getKwanzaaHoliday()</a></h3>
-			<p>Get Kwanzaa for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Kwanzaa in a given year.</p>
-			<pre><code class="language-php">getKwanzaaHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKwanzaaHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Kwanzaa&quot;,
-//    &quot;date&quot;: &quot;2022-12-26 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1090
-// }</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getKwanzaaHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Kwanzaa&quot;,
-//    &quot;date&quot;: &quot;2020-12-26 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 360
-// }
-
-$holidays-&gt;name // Kwanzaa
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-26-2020
-$holidays-&gt;days_away // 360
-$holidays-&gt;bank_holiday // false</code></pre>
-
-
-
-			<h3 id="getLaborDayHoliday"><a href="#getLaborDayHoliday">getLaborDayHoliday()</a></h3>
-			<p>Get Labor Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Labor Day in a given year.</p>
-			<pre><code class="language-php">getLaborDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getLaborDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Labor Day&quot;,
-//    &quot;date&quot;: &quot;2020-09-07 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 250
-// }
-
-$holidays-&gt;name // Labor Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 09-07-2020
-$holidays-&gt;days_away // 250
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getLaborDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Labor Day&quot;,
-//    &quot;date&quot;: &quot;2022-09-05 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 978
-// }</code></pre>
-
-
-
-
-			<h3 id="getMemorialDayHoliday"><a href="#getMemorialDayHoliday">getMemorialDayHoliday()</a></h3>
-			<p>Get Memorial Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Memorial Day in a given year.</p>
-			<pre><code class="language-php">getMemorialDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMemorialDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Memorial Day&quot;,
-//    &quot;date&quot;: &quot;2020-05-25 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 145
-// }
-
-$holidays-&gt;name // Memorial Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 05-25-2020
-$holidays-&gt;days_away // 145
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMemorialDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Memorial Day&quot;,
-//    &quot;date&quot;: &quot;2022-05-30 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 880
-// }</code></pre>
-
-
-
-
-			<h3 id="getMLKDayHoliday"><a href="#getMLKDayHoliday">getMLKDayHoliday()</a></h3>
-			<p>Get Rejtvényfejtők világnapja for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code>to get Rejtvényfejtők világnapja in a given year.</p>
-			<pre><code class="language-php">getMLKDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMLKDayHoliday();
+<h3 id="getRejtvenyfejtokVilagnapjaHoliday"><a href="#getRejtvenyfejtokVilagnapjaHoliday">getRejtvenyfejtokVilagnapjaHoliday()</a></h3>
+<p>The <code>RejtvenyfejtokVilagnapja</code> trait provides methods to calculate the date for Rejtvényfejtők világnapja for a given year.</p>
+<p>Get the date of the Rejtvényfejtők világnapja for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getRejtvenyfejtokVilagnapjaHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getRejtvenyfejtokVilagnapjaHoliday();
 
 // {
 //    &quot;name&quot;: &quot;Rejtvényfejtők világnapja&quot;,
 //    &quot;date&quot;: &quot;2020-02-03 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 19
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 33
 // }
 
-$holidays-&gt;name // Rejtvényfejtők világnapja
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 01-20-2020
-$holidays-&gt;days_away // 19
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMLKDayHoliday(2022);
+$holiday-&gt;name // Rejtvényfejtők világnapja
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 02-03-2020
+$holiday-&gt;days_away // 33
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getRejtvenyfejtokVilagnapjaHoliday(2022);
 
 // {
 //    &quot;name&quot;: &quot;Rejtvényfejtők világnapja&quot;,
-//    &quot;date&quot;: &quot;2022-01-17 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 747
+//    &quot;date&quot;: &quot;2022-02-03 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 763
 // }</code></pre>
 
-
-
-
-			<h3 id="getMothersDayHoliday"><a href="#getMothersDayHoliday">getMothersDayHoliday()</a></h3>
-			<p>Get Mother's Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Mother's Day in a given year.</p>
-			<pre><code class="language-php">getMothersDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMothersDayHoliday();
+<h3 id="getSemmelweisNapHoliday"><a href="#getSemmelweisNapHoliday">getSemmelweisNapHoliday()</a></h3>
+<p>The <code>SemmelweisNap</code> trait provides methods to calculate the date for Semmelweis nap for a given year.</p>
+<p>Get the date of the Semmelweis nap for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getSemmelweisNapHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getSemmelweisNapHoliday();
 
 // {
-//    &quot;name&quot;: &quot;Mother&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2020-05-10 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 130
+//    &quot;name&quot;: &quot;Semmelweis nap&quot;,
+//    &quot;date&quot;: &quot;2020-07-01 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 182
 // }
 
-$holidays-&gt;name // Mother&#039;s Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 05-10-2020
-$holidays-&gt;days_away // 130
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getMothersDayHoliday(2022);
+$holiday-&gt;name // Semmelweis nap
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 07-01-2020
+$holiday-&gt;days_away // 182
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getSemmelweisNapHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;Mother&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2022-05-08 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 858
+//    &quot;name&quot;: &quot;Semmelweis nap&quot;,
+//    &quot;date&quot;: &quot;2022-07-01 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 912
 // }</code></pre>
 
+<h3 id="getSzentesteHoliday"><a href="#getSzentesteHoliday">getSzentesteHoliday()</a></h3>
+<p>The <code>Szenteste</code> trait provides methods to calculate the date for Szenteste for a given year.</p>
+<p>Get the date of the Szenteste for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getSzentesteHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getSzentesteHoliday();
 
+// {
+//    &quot;name&quot;: &quot;Szenteste&quot;,
+//    &quot;date&quot;: &quot;2020-12-24 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 358
+// }
 
+$holiday-&gt;name // Szenteste
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-24-2020
+$holiday-&gt;days_away // 358
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holiday-&gt;getSzentesteHoliday(2022);
 
-			<h3 id="getNewYearsDayHoliday"><a href="#getNewYearsDayHoliday">getNewYearsDayHoliday()</a></h3>
-			<p>Get New Year's Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get New Year's Day in a given year.</p>
-			<pre><code class="language-php">getNewYearsDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getNewYearsDayHoliday();
+// {
+//    &quot;name&quot;: &quot;Szenteste&quot;,
+//    &quot;date&quot;: &quot;2022-12-24 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 1088
+// }</code></pre>
+
+<h3 id="getSzilveszterHoliday"><a href="#getSzilveszterHoliday">getSzilveszterHoliday()</a></h3>
+<p>The <code>Szilveszter</code> trait provides methods to calculate the date for Szilveszter for a given year.</p>
+<p>Get the date of the Szilveszter for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getSzilveszterHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holiday = Carbon::create(2020, 1, 1);
+$holidays-&gt;getSzilveszterHoliday();
+
+// {
+//    &quot;name&quot;: &quot;Szilveszter&quot;,
+//    &quot;date&quot;: &quot;2020-12-31 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 365
+// }
+
+$holiday-&gt;name // Szilveszter
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-31-2020
+$holiday-&gt;days_away // 365
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getSzilveszterHoliday(2022);
+
+// {
+//    &quot;name&quot;: &quot;Szilveszter&quot;,
+//    &quot;date&quot;: &quot;2022-12-31 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 1095
+// }</code></pre>
+
+<h3 id="getUjevHoliday"><a href="#getUjevHoliday">getUjevHoliday()</a></h3>
+<p>The <code>Ujev</code> trait provides methods to calculate the date for Újév for a given year.</p>
+<p>Get the date of the Újév for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getUjevHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getUjevHoliday();
 
 // {
 //    &quot;name&quot;: &quot;Újév&quot;,
@@ -1367,438 +1994,47 @@ $holidays-&gt;getNewYearsDayHoliday();
 //    &quot;days_away&quot;: 0
 // }
 
-$holidays-&gt;name // Újév
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 01-01-2020
-$holidays-&gt;days_away // : 0
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getNewYearsDayHoliday(2022);
+$holiday-&gt;name // Újév
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 01-01-2020
+$holiday-&gt;days_away // 0
+$holiday-&gt;bank_holiday // true</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getUjevHoliday(2022);
 
 // {
 //    &quot;name&quot;: &quot;Újév&quot;,
 //    &quot;date&quot;: &quot;2022-01-01 00:00:00&quot;,
 //    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 731
+//    &quot;days_away&quot;: 730
 // }</code></pre>
 
-
-
-
-			<h3 id="getNewYearsEveHoliday"><a href="#getNewYearsEveHoliday">getNewYearsEveHoliday()</a></h3>
-			<p>Get New Year's Eve for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get New Year's Eve in a given year.</p>
-			<pre><code class="language-php">getNewYearsEveHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getNewYearsEveHoliday();
+<h3 id="getVizkeresztaFarsangKezdeteHoliday"><a href="#getVizkeresztaFarsangKezdeteHoliday">getVizkeresztaFarsangKezdeteHoliday()</a></h3>
+<p>The <code>VizkeresztaFarsangKezdete</code> trait provides methods to calculate the date for Vízkereszt, a farsang kezdete for a given year.</p>
+<p>Get the date of the Vízkereszt, a farsang kezdete for the current year of the Carbon object. Optionally pass in a <code>$year</code> to get the date in a specific year.</p>
+<pre><code class="language-php">getVizkeresztaFarsangKezdeteHoliday(int $year = null) : object</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getVizkeresztaFarsangKezdeteHoliday();
 
 // {
-//    &quot;name&quot;: &quot;New Year&#039;s Eve&quot;,
-//    &quot;date&quot;: &quot;2020-12-31 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 365
+//    &quot;name&quot;: &quot;Vízkereszt, a farsang kezdete&quot;,
+//    &quot;date&quot;: &quot;2020-01-06 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 5
 // }
 
-$holidays-&gt;name // New Year&#039;s Eve
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-31-2020
-$holidays-&gt;days_away // 365
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getNewYearsEveHoliday(2022);
+$holiday-&gt;name // Vízkereszt, a farsang kezdete
+$holiday-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 01-06-2020
+$holiday-&gt;days_away // 5
+$holiday-&gt;bank_holiday // false</code></pre>
+<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
+$holidays-&gt;getVizkeresztaFarsangKezdeteHoliday(2022);
 
 // {
-//    &quot;name&quot;: &quot;New Year&#039;s Eve&quot;,
-//    &quot;date&quot;: &quot;2022-12-31 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1095
+//    &quot;name&quot;: &quot;Vízkereszt, a farsang kezdete&quot;,
+//    &quot;date&quot;: &quot;2022-01-06 00:00:00&quot;,
+//    &quot;bank_holiday&quot;: false,
+//    &quot;days_away&quot;: 735
 // }</code></pre>
-
-
-
-
-			<h3 id="getOrthodoxEasterHoliday"><a href="#getOrthodoxEasterHoliday">getOrthodoxEasterHoliday()</a></h3>
-			<p>Get Orthodox Easter for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Orthodox Easter in a given year.</p>
-			<pre><code class="language-php">getOrthodoxEasterHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getOrthodoxEasterHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Orthodox Easter&quot;,
-//    &quot;date&quot;: &quot;2020-04-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 109
-// }
-
-$holidays-&gt;name // Orthodox Easter
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-19-2020
-$holidays-&gt;days_away // 109
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getOrthodoxEasterHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Orthodox Easter&quot;,
-//    &quot;date&quot;: &quot;2022-04-24 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 844
-// }</code></pre>
-
-
-
-
-			<h3 id="getPalmSundayHoliday"><a href="#getPalmSundayHoliday">getPalmSundayHoliday()</a></h3>
-			<p>Get Palm Sunday for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Palm Sunday in a given year.</p>
-			<pre><code class="language-php">getPalmSundayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPalmSundayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Palm Sunday&quot;,
-//    &quot;date&quot;: &quot;2020-04-05 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 95
-// }
-
-$holidays-&gt;name // Palm Sunday
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-05-2020
-$holidays-&gt;days_away // 95
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPalmSundayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Palm Sunday&quot;,
-//    &quot;date&quot;: &quot;2022-04-10 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 830
-// }</code></pre>
-
-
-
-
-			<h3 id="getPassoverHoliday"><a href="#getPassoverHoliday">getPassoverHoliday()</a></h3>
-			<p>Get Passover for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code>to get Passover in a given year.</p>
-			<pre><code class="language-php">getPassoverHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPassoverHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Passover&quot;,
-//    &quot;date&quot;: &quot;2020-04-09 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 99
-// }
-
-$holidays-&gt;name // Passover
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-09-2020
-$holidays-&gt;days_away // 99
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPassoverHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Passover&quot;,
-//    &quot;date&quot;: &quot;2022-04-16 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 836
-// }</code></pre>
-
-
-
-
-			<h3 id="getPatriotDayHoliday"><a href="#getPatriotDayHoliday">getPatriotDayHoliday()</a></h3>
-			<p>Get Patriot Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Patriot Day in a given year.</p>
-			<pre><code class="language-php">getPatriotDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPatriotDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Patriot Day&quot;,
-//    &quot;date&quot;: &quot;2020-09-11 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 254
-// }
-
-$holidays-&gt;name // Patriot Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 09-11-2020
-$holidays-&gt;days_away // 254
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPatriotDayHoliday(2022);
-
-// {
-//    &quot;name&quot;:&quot;Patriot Day&quot;,
-//    &quot;date&quot;: &quot;2022-09-11 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 984
-// }</code></pre>
-
-
-
-			<h3 id="getPearlHarborRemembranceDayHoliday"><a href="#getPearlHarborRemembranceDayHoliday">getPearlHarborRemembranceDayHoliday()</a></h3>
-			<p>Get Pearl Harbor Remembrance Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Pearl Harbor Remembrance Day in a given year.</p>
-			<pre><code class="language-php">getPearlHarborRemembranceDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPearlHarborRemembranceDayHoliday()
-
-// {
-//    &quot;name&quot;: &quot;Pearl Harbor Remembrance Day&quot;,
-//    &quot;date&quot;: &quot;2020-12-07 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 341
-// }
-
-$holidays-&gt;name // Pearl Harbor Remembrance Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 12-07-2020
-$holidays-&gt;days_away // 341
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPearlHarborRemembranceDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Pearl Harbor Remembrance Day&quot;,
-//    &quot;date&quot;: &quot;2022-12-07 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1071
-// }</code></pre>
-
-
-
-			<h3 id="getPresidentsDayHoliday"><a href="#getPresidentsDayHoliday">getPresidentsDayHoliday()</a></h3>
-			<p>Get Presidents' Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Presidents' Day in a given year.</p>
-			<pre><code class="language-php">getPresidentsDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPresidentsDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Presidents&#039; Day&quot;,
-//    &quot;date&quot;: &quot;2020-02-17 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 47
-// }
-
-$holidays-&gt;name // Presidents&#039; Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 02-17-2020
-$holidays-&gt;days_away // 47
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getPresidentsDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Presidents&#039; Day&quot;,
-//    &quot;date&quot;: &quot;2022-02-21 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 782
-// }</code></pre>
-
-
-
-			<h3 id="getRoshHashanahHoliday"><a href="#getRoshHashanahHoliday">getRoshHashanahHoliday()</a></h3>
-			<p>Get Rosh Hashanah for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Rosh Hashanah in a given year.</p>
-			<pre><code class="language-php">getRoshHashanahHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getRoshHashanahHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Rosh Hashanah&quot;,
-//    &quot;date&quot;: &quot;2020-09-19 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 262
-// }
-
-$holidays-&gt;name // Rosh Hashanah
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 09-19-2020
-$holidays-&gt;days_away // 262
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getRoshHashanahHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Rosh Hashanah&quot;,
-//    &quot;date&quot;: &quot;2022-09-26 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 999
-// }</code></pre>
-
-
-
-
-			<h3 id="getStPatricksDayHoliday"><a href="#getStPatricksDayHoliday">getStPatricksDayHoliday()</a></h3>
-			<p>Get St. Patrick's Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get St. Patrick's Day in a given year.</p>
-			<pre><code class="language-php">getStPatricksDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getStPatricksDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;St. Patrick&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2020-03-17 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 76
-// }
-
-$holidays-&gt;name // St. Patrick&#039;s Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 03-17-2020
-$holidays-&gt;days_away // 76
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getStPatricksDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;St. Patrick&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2022-03-17 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 806
-// }</code></pre>
-
-
-
-
-			<h3 id="getTaxDayHoliday"><a href="#getTaxDayHoliday">getTaxDayHoliday()</a></h3>
-			<p>Get Tax Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Tax Day in a given year.</p>
-			<pre><code class="language-php">getTaxDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getTaxDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Tax Day&quot;,
-//    &quot;date&quot;: &quot;2020-04-15 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 105
-// }
-
-$holidays-&gt;name // Tax Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 04-15-2020
-$holidays-&gt;days_away // 105
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getTaxDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Tax Day&quot;,
-//    &quot;date&quot;: &quot;2022-04-18 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 838
-// }</code></pre>
-
-
-
-
-			<h3 id="getThanksgivingHoliday"><a href="#getThanksgivingHoliday">getThanksgivingHoliday()</a></h3>
-			<p>Get Thanksgiving for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Thanksgiving in a given year.</p>
-			<pre><code class="language-php">getThanksgivingHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getThanksgivingHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Thanksgiving&quot;,
-//    &quot;date&quot;: &quot;2020-11-26 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 330
-// }
-
-$holidays-&gt;name // Thanksgiving
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 11-26-2020
-$holidays-&gt;days_away // 330
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getThanksgivingHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Thanksgiving&quot;,
-//    &quot;date&quot;: &quot;2022-11-24 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 1058
-// }</code></pre>
-
-
-
-
-			<h3 id="getValentinesDayHoliday"><a href="#getValentinesDayHoliday">getValentinesDayHoliday()</a></h3>
-			<p>Get Valentine's Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Valentine's Day in a given year.</p>
-			<pre><code class="language-php">getValentinesDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getValentinesDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Valentine&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2020-02-14 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 44
-// }
-
-$holidays-&gt;name // Valentine&#039;s Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 02-14-2020
-$holidays-&gt;days_away // 44
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getValentinesDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Valentine&#039;s Day&quot;,
-//    &quot;date&quot;: &quot;2022-02-14 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 775
-// }</code></pre>
-
-
-
-
-			<h3 id="getVeteransDayHoliday"><a href="#getVeteransDayHoliday">getVeteransDayHoliday()</a></h3>
-			<p>Get Veterans Day for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Veterans Day in a given year.</p>
-			<pre><code class="language-php">getVeteransDayHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getVeteransDayHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Veterans Day&quot;,
-//    &quot;date&quot;: &quot;2020-11-11 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 315
-// }
-
-$holidays-&gt;name // Veterans Day
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 11-11-2020
-$holidays-&gt;days_away // 315
-$holidays-&gt;bank_holiday // true</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getVeteransDayHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Veterans Day&quot;,
-//    &quot;date&quot;: &quot;2022-11-11 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: true,
-//    &quot;days_away&quot;: 1045
-// }</code></pre>
-
-
-
-
-			<h3 id="getYomKippurHoliday"><a href="#getYomKippurHoliday">getYomKippurHoliday()</a></h3>
-			<p>Get Yom Kippur for the current year of the Carbon object. Optionally pass in a <code class="language-php">$year</code> to get Yom Kippur in a given year.</p>
-			<pre><code class="language-php">getYomKippurHoliday(int $year=null) : object</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getYomKippurHoliday();
-
-// {
-//    &quot;name&quot;: &quot;Yom Kippur&quot;,
-//    &quot;date&quot;: &quot;2020-09-28 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 271
-// }
-
-$holidays-&gt;name // Yom Kippur
-$holidays-&gt;date-&gt;format(&#039;m-d-Y&#039;) // 09-28-2020
-$holidays-&gt;days_away // 271
-$holidays-&gt;bank_holiday // false</code></pre>
-			<pre><code class="language-php">$holidays = Carbon::create(2020, 1, 1);
-$holidays-&gt;getYomKippurHoliday(2022);
-
-// {
-//    &quot;name&quot;: &quot;Yom Kippur&quot;,
-//    &quot;date&quot;: &quot;2022-10-05 00:00:00&quot;,
-//    &quot;bank_holiday&quot;: false
-//    &quot;days_away&quot;: 1008
-// }</code></pre>
-
-
 
 
 		</div>
