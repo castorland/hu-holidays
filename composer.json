@@ -17,7 +17,7 @@
     ],
     "type": "library",
     "require": {
-        "nesbot/carbon": "^2.67.0",
+        "nesbot/carbon": "^2.67.0 || ^3.0",
         "php": "^8.0",
         "ext-calendar": "*"
     },
