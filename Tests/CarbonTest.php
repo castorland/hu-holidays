@@ -34,6 +34,18 @@ class CarbonTest extends TestCase
         $this->assertEquals("Az államalapítás ünnepe", $holiday->getHolidayName());
     }
 
+    public function testHolidayNameForObservedBankHolidays()
+    {
+        $mondayObservedHoliday = Carbon::create(2023, 1, 2);
+        $this->assertSame('Újév (Observed)', $mondayObservedHoliday->getHolidayName());
+
+        $fridayObservedHoliday = Carbon::create(2025, 3, 14);
+        $this->assertSame(
+            'Nemzetközi pi nap, Az 1848-as forradalom ünnepe (Observed)',
+            $fridayObservedHoliday->getHolidayName()
+        );
+    }
+
     public function testGetHoliday()
     {
         $holiday = Carbon::create(2020, 1, 1)->getAzAllamalapitasUnnepeHoliday()->date;
@@ -72,7 +84,7 @@ class CarbonTest extends TestCase
         $holidays = $carbon->getHolidaysInDays(300, 'all');
 
         $this->assertFalse(count($holidays) == 3);
-        $this->assertTrue(count($holidays) == 44);
+        $this->assertTrue(count($holidays) == 45);
 
         $carbon = Carbon::create(2020, 1, 5);
         $holidays = $carbon->getHolidaysInDays(360, ["Karácsony"]);
@@ -99,13 +111,13 @@ class CarbonTest extends TestCase
         $holidays = $carbon->getHolidaysInYears(1, 'all');
 
         $this->assertFalse(count($holidays) == 40);
-        $this->assertTrue(count($holidays) == 54);
+        $this->assertTrue(count($holidays) == 55);
 
         $carbon = Carbon::create(2020, 1, 5, 1, 0, 0);
         $holidays = $carbon->getHolidaysInYears(1, 'all');
 
         $this->assertFalse(count($holidays) == 40);
-        $this->assertTrue(count($holidays) == 54);
+        $this->assertTrue(count($holidays) == 55);
     }
 
     public function testAddUserHoliday()

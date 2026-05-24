@@ -463,6 +463,18 @@ trait Holiday
                 'bank_holiday_end_year' => null,
             ),
             array(
+                'name' => "A Nap napja",
+                'search_names' => ["a nap napja"],
+                'date' => function () use ($year) {
+                    return $this->setANapNapja($year);
+                },
+                'bank_holiday' => false,
+                'start_year' => 1978,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+            ),
+            array(
                 'name' => "Anyák napja",
                 'search_names' => ["anyák napja"],
                 'date' => function () use ($year) {
