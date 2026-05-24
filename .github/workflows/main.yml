@@ -60,7 +60,7 @@ jobs:
 
     - name: Run Codecov Tests
       if: ${{ matrix.coverage == 'true' }}
-      run: ./vendor/bin/phpunit --coverage-clover ./build/coverage/codecov.xml
+      run: ./vendor/bin/phpunit --coverage-filter ./src --coverage-clover ./build/coverage/codecov.xml
 
     - name: Code coverage
       if: ${{ matrix.coverage == 'true' }}
