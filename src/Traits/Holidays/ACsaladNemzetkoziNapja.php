@@ -21,7 +21,7 @@ trait ACsaladNemzetkoziNapja
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getACsaladNemzetkoziNapjaHoliday(int $year = null)
+    public function getACsaladNemzetkoziNapjaHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A család nemzetközi napja", $year)[0];
     }

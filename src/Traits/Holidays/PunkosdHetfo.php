@@ -21,7 +21,7 @@ trait PunkosdHetfo
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getPunkosdHetfoHoliday(int $year = null)
+    public function getPunkosdHetfoHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Pünkösdhétfő", $year)[0];
     }

@@ -21,7 +21,7 @@ trait AVallasokVilagnapja
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAVallasokVilagnapjaHoliday(int $year = null)
+    public function getAVallasokVilagnapjaHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A vallások világnapja", $year)[0];
     }

@@ -21,7 +21,7 @@ trait FoldunkertVilagnap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getFoldunkertVilagnapHoliday(int $year = null)
+    public function getFoldunkertVilagnapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Földünkért világnap", $year)[0];
     }

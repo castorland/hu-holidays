@@ -21,7 +21,7 @@ trait KornyezetvedelmiVilagnap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getKornyezetvedelmiVilagnapHoliday(int $year = null)
+    public function getKornyezetvedelmiVilagnapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Környezetvédelmi világnap", $year)[0];
     }

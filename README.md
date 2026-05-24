@@ -2,8 +2,8 @@
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/castorland/hu-holidays?style=flat-square)](https://packagist.org/packages/castorland/hu-holidays)
 [![Total Downloads](https://img.shields.io/packagist/dt/castorland/hu-holidays?style=flat-square)](https://packagist.org/packages/castorland/hu-holidays/stats)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/castorland/hu-holidays/main.yml?branch=master&style=flat-square)](https://github.com/castorland/hu-holidays/actions?query=branch%3Amaster)
-[![Codecov branch](https://img.shields.io/codecov/c/gh/castorland/hu-holidays/master?style=flat-square)](https://app.codecov.io/gh/castorland/hu-holidays/branch/master)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/castorland/hu-holidays/main.yml?branch=main&style=flat-square)](https://github.com/castorland/hu-holidays/actions?query=branch%3Amain)
+[![Codecov branch](https://img.shields.io/codecov/c/gh/castorland/hu-holidays/main?style=flat-square)](https://app.codecov.io/gh/castorland/hu-holidays/branch/main)
 [![License](https://img.shields.io/github/license/castorland/hu-holidays?style=flat-square)](https://github.com/castorland/hu-holidays/blob/master/LICENSE)
 </div>
 
@@ -77,7 +77,7 @@ This extends [Carbon](http://carbon.nesbot.com/) and adds support for Hungarian 
 ### Requirements
 
 * [Carbon](http://carbon.nesbot.com/)
-* PHP 8.0+
+* PHP 8.0+ (tested on PHP 8.0–8.4)
 
 ### Usage
 
@@ -402,4 +402,3 @@ Test against Carbon v2
 ```
 ./tests/carbon-2.sh
 ```
-

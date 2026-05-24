@@ -21,7 +21,7 @@ trait RejtvenyfejtokVilagnapja
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getRejtvenyfejtokVilagnapjaHoliday(int $year = null)
+    public function getRejtvenyfejtokVilagnapjaHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Rejtvényfejtők világnapja", $year)[0];
     }

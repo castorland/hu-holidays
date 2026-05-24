@@ -21,7 +21,7 @@ trait AMunkaUnnepe
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAMunkaUnnepeHoliday(int $year = null)
+    public function getAMunkaUnnepeHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A munka ünnepe", $year)[0];
     }

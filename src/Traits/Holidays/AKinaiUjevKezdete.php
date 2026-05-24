@@ -21,7 +21,7 @@ trait AKinaiUjevKezdete
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAKinaiUjevKezdeteHoliday(int $year = null)
+    public function getAKinaiUjevKezdeteHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A kínai újév kezdete", $year)[0];
     }

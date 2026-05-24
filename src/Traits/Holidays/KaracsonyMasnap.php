@@ -21,7 +21,7 @@ trait KaracsonyMasnap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getKaracsonyMasnapHoliday(int $year = null)
+    public function getKaracsonyMasnapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Karácsony Másnap", $year)[0];
     }

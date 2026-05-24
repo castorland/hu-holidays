@@ -21,7 +21,7 @@ trait AMeteorologiaiTavaszKezdete
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAMeteorologiaiTavaszKezdeteHoliday(int $year = null)
+    public function getAMeteorologiaiTavaszKezdeteHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A meteorológiai tavasz kezdete", $year)[0];
     }

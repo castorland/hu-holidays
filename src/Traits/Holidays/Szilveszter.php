@@ -21,7 +21,7 @@ trait Szilveszter
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getSzilveszterHoliday(int $year = null)
+    public function getSzilveszterHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Szilveszter", $year)[0];
     }

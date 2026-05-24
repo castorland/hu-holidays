@@ -21,7 +21,7 @@ trait Az1848asForradalomUnnepe
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAz1848asForradalomUnnepeHoliday(int $year = null)
+    public function getAz1848asForradalomUnnepeHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Az 1848-as forradalom ünnepe", $year)[0];
     }

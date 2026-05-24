@@ -21,7 +21,7 @@ trait Szenteste
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getSzentesteHoliday(int $year = null)
+    public function getSzentesteHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Szenteste", $year)[0];
     }

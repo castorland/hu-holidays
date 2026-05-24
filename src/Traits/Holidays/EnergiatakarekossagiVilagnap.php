@@ -21,7 +21,7 @@ trait EnergiatakarekossagiVilagnap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getEnergiatakarekossagiVilagnapHoliday(int $year = null)
+    public function getEnergiatakarekossagiVilagnapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Energiatakarékossági világnap", $year)[0];
     }

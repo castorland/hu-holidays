@@ -21,7 +21,7 @@ trait SemmelweisNap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getSemmelweisNapHoliday(int $year = null)
+    public function getSemmelweisNapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Semmelweis-nap", $year)[0];
     }

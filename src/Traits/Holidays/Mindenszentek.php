@@ -21,7 +21,7 @@ trait Mindenszentek
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getMindenszentekHoliday(int $year = null)
+    public function getMindenszentekHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Mindenszentek", $year)[0];
     }
