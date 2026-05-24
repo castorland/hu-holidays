@@ -400,5 +400,5 @@ $ XDEBUG_MODE=coverage ./vendor/bin/phpunit
 Test against Carbon v2
 
 ```
-./tests/carbon-2.sh
+./Tests/carbon.sh
 ```
