@@ -37,7 +37,7 @@ jobs:
         php-version: ${{ matrix.php-version }}
         ini-values: post_max_size=256M, max_execution_time=180
         extensions: mbstring, intl, calendar
-        coverage: xdebug
+        coverage: ${{ matrix.coverage == 'true' && 'xdebug' || 'none' }}
         tools: php-cs-fixer
 
     - name: Validate composer.json and composer.lock
