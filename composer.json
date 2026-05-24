@@ -39,6 +39,5 @@
     "config": {
         "discard-changes": true
     },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
