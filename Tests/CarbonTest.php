@@ -34,6 +34,15 @@ class CarbonTest extends TestCase
         $this->assertEquals("Az államalapítás ünnepe", $holiday->getHolidayName());
     }
 
+    public function testHolidayNameForObservedBankHolidays()
+    {
+        $mondayObservedHoliday = Carbon::create(2023, 1, 2);
+        $this->assertSame('Újév (Observed)', $mondayObservedHoliday->getHolidayName());
+
+        $fridayObservedHoliday = Carbon::create(2025, 3, 14);
+        $this->assertSame('Az 1848-as forradalom ünnepe (Observed)', $fridayObservedHoliday->getHolidayName());
+    }
+
     public function testGetHoliday()
     {
         $holiday = Carbon::create(2020, 1, 1)->getAzAllamalapitasUnnepeHoliday()->date;
