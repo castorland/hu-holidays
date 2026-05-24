@@ -21,7 +21,7 @@ trait OszirozsasForradalom
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getOszirozsasForradalomHoliday(int $year = null)
+    public function getOszirozsasForradalomHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Őszirózsás forradalom", $year)[0];
     }

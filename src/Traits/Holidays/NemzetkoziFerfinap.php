@@ -21,7 +21,7 @@ trait NemzetkoziFerfinap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getNemzetkoziFerfinapHoliday(int $year = null)
+    public function getNemzetkoziFerfinapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Nemzetközi férfinap", $year)[0];
     }

@@ -21,7 +21,7 @@ trait VizkeresztaFarsangKezdete
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getVizkeresztaFarsangKezdeteHoliday(int $year = null)
+    public function getVizkeresztaFarsangKezdeteHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Vízkereszt, a farsang kezdete", $year)[0];
     }

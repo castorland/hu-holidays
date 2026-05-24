@@ -21,7 +21,7 @@ trait AzAllamalapitasUnnepe
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getAzAllamalapitasUnnepeHoliday(int $year = null)
+    public function getAzAllamalapitasUnnepeHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Az államalapítás ünnepe", $year)[0];
     }

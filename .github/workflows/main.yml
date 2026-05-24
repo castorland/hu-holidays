@@ -12,20 +12,21 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         include:
           - php-version: '8.0'
-            coverage: 'true'
-            phpunit-version: '9'
+            coverage: 'false'
           - php-version: '8.1'
-            coverage: 'true'
-            phpunit-version: '9'
+            coverage: 'false'
           - php-version: '8.2'
+            coverage: 'false'
+          - php-version: '8.3'
+            coverage: 'false'
+          - php-version: '8.4'
             coverage: 'true'
-            phpunit-version: '10'
 
     steps:
     - uses: actions/checkout@v3
@@ -36,8 +37,8 @@ jobs:
         php-version: ${{ matrix.php-version }}
         ini-values: post_max_size=256M, max_execution_time=180
         extensions: mbstring, intl, calendar
-        coverage: xdebug
-        tools: php-cs-fixer, phpunit:${{ matrix.phpunit-version }}
+        coverage: ${{ matrix.coverage == 'true' && 'xdebug' || 'none' }}
+        tools: php-cs-fixer
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -55,10 +56,11 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-interaction
 
     - name: Run Tests
-      run: ./vendor/bin/phpunit --testdox
+      run: ./vendor/bin/phpunit --testdox --no-coverage
 
     - name: Run Codecov Tests
-      run: ./vendor/bin/phpunit --coverage-clover ./build/coverage/codecov.xml
+      if: ${{ matrix.coverage == 'true' }}
+      run: ./vendor/bin/phpunit --coverage-filter ./src --coverage-clover ./build/coverage/codecov.xml
 
     - name: Code coverage
       if: ${{ matrix.coverage == 'true' }}

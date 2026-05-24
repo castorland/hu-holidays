@@ -21,7 +21,7 @@ trait ANobelDijAlapitasanakNapja
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getANobelDijAlapitasanakNapjaHoliday(int $year = null)
+    public function getANobelDijAlapitasanakNapjaHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("A Nobel-díj alapításának napja", $year)[0];
     }

@@ -21,7 +21,7 @@ trait RakellenesVilagnap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getRakellenesVilagnapHoliday(int $year = null)
+    public function getRakellenesVilagnapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Rákellenes világnap", $year)[0];
     }

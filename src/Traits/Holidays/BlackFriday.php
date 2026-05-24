@@ -27,7 +27,7 @@ trait BlackFriday
       *
       * @param int|null $year The year to get the holiday in
       */
-    public function getBlackFridayHoliday(int $year = null)
+    public function getBlackFridayHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Black Friday", $year)[0];
     }

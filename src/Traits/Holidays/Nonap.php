@@ -21,7 +21,7 @@ trait Nonap
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getNonapHoliday(int $year = null)
+    public function getNonapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Nőnap", $year)[0];
     }

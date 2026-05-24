@@ -21,7 +21,7 @@ trait Gyereknap
       *
       * @param int|null $year The year to get the holiday in
       */
-    public function getGyereknapHoliday(int $year = null)
+    public function getGyereknapHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Gyereknap", $year)[0];
     }

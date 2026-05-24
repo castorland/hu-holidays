@@ -21,7 +21,7 @@ trait Ujev
      *
      * @param int|null $year The year to get the holiday in
      */
-    public function getUjevHoliday(int $year = null)
+    public function getUjevHoliday(?int $year = null)
     {
         return $this->getHolidaysByYear("Újév", $year)[0];
     }
